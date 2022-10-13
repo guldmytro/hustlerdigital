@@ -1,0 +1,1727 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="main" class="main">
+        <video
+            playsinline
+            autoplay
+            muted
+            loop
+            poster="{% static 'img/bg1.jpg' %}"
+            id="bgvid">
+            <source
+                src="{% static 'video/retro.webm' %}"
+                type="video/webm" />
+            <source
+                src="{% static 'video/retro.mp4' %}"
+                type="video/mp4" />
+        </video>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h1>
+                        НЕ ГОНИСЯ ЗА ТРЕНДАМИ.<br />
+                        СТВОРЮЙ ЇХ.
+                    </h1>
+                    <h2>
+                        Послуги онлайн просування, розробки<br />
+                        та запровадження стратегії influence-маркетингу
+                    </h2>
+                    <a class="btn btn-white" href="#contacts">Зв'язатися</a>
+                </div>
+            </div>
+            <div class="row numses">
+                <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                    <div class="nums num1">0+</div>
+                    <p>світових брендів, які співпрацюють</p>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                    <div class="nums num2">0</div>
+                    <p>Найдовше LTV</p>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                    <div class="nums num3">>0М</div>
+                    <p>Загальне охоплення бази блогерів</p>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                    <div class="nums num4">0+</div>
+                    <p>Рекламних кампаній запущено цього року</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about-us" class="about_us">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-xl-6 col-lg-6">
+                    <h2>Про нас</h2>
+                </div>
+                <div class="col-12 col-md-12 col-xl-6 col-lg-6">
+                    <div class="aub">
+                        <div class="aub1">Hustler Digital</div>
+                        <div class="aub2">
+                            — це ідеальне combo з ефективних інструментів
+                            маркетингу, експірієнс<br />
+                            і лідерів думок.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hustler">
+        <div class="container">
+            <div class="row">
+                <div
+                    class="col-12 col-md-12 col-lg-12 col-xl-6 orderhustler2">
+                    <h2>Знайомтесь -<br />HUSTLER</h2>
+                    <p>
+                        У 2021 році кілька менеджерів та медіабаєрів
+                        запустили машину зі створення та просування
+                        контенту. Так виник HUSTLER — креативне агентство
+                        fullstack просування.
+                    </p>
+                    <p>
+                        За останні роки ми організували понад 1000
+                        інтеграцій<br />
+                        у блогерів різного рівня, реалізували близько 100
+                        рекламних кампаній, встигли співпрацювати з 30+
+                        гемблінг-проектами, серед яких бренди зі світовим
+                        ім&#8217;ям.
+                    </p>
+                    <p>
+                        Звертаючись до нас, ви отримуєте не просто
+                        підрядника у вигляді агентства, а виділену in-house
+                        команду на аутсорсі з низкою переваг.
+                    </p>
+                    <p>
+                        Основними напрямками агентства є: influence
+                        marketing, брендинг, арбітраж трафіку, виробництво
+                        та просування контенту.
+                    </p>
+                </div>
+                <div
+                    class="col-12 col-md-8 col-lg-12 col-xl-6 orderhustler1">
+                    <picture
+                        ><source
+                            srcset="{% static 'img/hustler.png.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="hustler1 webpexpress-processed"
+                            src="{% static 'img/hustler.png' %}"
+                            alt=""
+                    /></picture>
+                    <img
+                        class="hustler2"
+                        src="{% static 'img/hustler2.png' %}"
+                        alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="uslugi" class="services">
+        <img
+            class="serv1"
+            src="{% static 'img/uslugi1.svg' %}"
+            alt="" />
+        <img
+            class="serv2"
+            src="{% static 'img/uslugi2.svg' %}"
+            alt="" />
+        <img
+            class="serv3"
+            src="{% static 'img/uslugi3.svg' %}"
+            alt="" />
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2>Послуги агенції</h2>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga1.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>
+                                INFLUENCER MARKETING ЕКСКЛЮЗИВНИЙ INFLUENCER
+                            </h3>
+                        </div>
+                        <p>
+                            Рекламні інтеграції у блогерів та лідерів думок
+                        </p>
+                        <p>
+                            Організація онлайн трансляцій з топовими
+                            стрімерами
+                        </p>
+                        <p>Залучення гравців у сфері гемблінгу/беттингу</p>
+                        <p>
+                            Розробка, створення та промоушен онлайн та
+                            офлайн івентів з лідерами думок
+                        </p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga2.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>DIGITAL КРЕАТИВ & ПРОДАКШН</h3>
+                        </div>
+                        <p>
+                            Створення та ведення корпоративних каналів
+                            YouTube / Twitch
+                        </p>
+                        <p>Розробка брендингу та корпоративного стилю</p>
+                        <p>Створення креативних промоматеріалів</p>
+                        <p>Створення іміджевих відеороликів</p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga3.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>РОЗРОБКА РЕКЛАМНИХ СТРАТЕГІЙ</h3>
+                        </div>
+                        <p>
+                            Розробка рекламної стратегії з 0 під різні
+                            бізнес завдання
+                        </p>
+                        <p>
+                            Підвищення впізнаваності та лояльності бренду на
+                            ринку
+                        </p>
+                        <p>Пошук нових та утримання старих клієнтів</p>
+                        <p>Формування позиціонування серед ЦА</p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga4.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>RESEARCH & DEVELOPMENT</h3>
+                        </div>
+                        <p>Загальна оцінка та аналіз проекту</p>
+                        <p>
+                            Пророблення прогалин та невикористаних
+                            можливостей
+                        </p>
+                        <p>
+                            Підбір та впровадження готових рішень під різні
+                            бізнес-завдання
+                        </p>
+                        <p>
+                            Рекомендації щодо подальшого розвитку на
+                            існуючому та потенційному ринках
+                        </p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga5.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>MEDIA BUYING</h3>
+                        </div>
+                        <p>
+                            Розміщення реклами на майданчиках із
+                            максимальним охопленням ЦА
+                        </p>
+                        <p>
+                            Медіапланування, зрозумілий та швидкий процес
+                            закупівлі, аналіз ринку та переговори
+                        </p>
+                        <p>
+                            Зрозуміла аналітика, можливість кастомізувати
+                            параметри, оптимізація
+                        </p>
+                        <p>
+                            Робота з унікальними майданчиками – Pornhub,
+                            OnlyFans, TikTok
+                        </p>
+                        <p>
+                            Підготовка матеріалів відповідно до технічних
+                            вимог паблішерів
+                        </p>
+                        <p>
+                            Підбиття підсумків, звітність, аналіз
+                            ефективності
+                        </p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga6.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>SOCIAL MEDIA MARKETING</h3>
+                        </div>
+                        <p>
+                            Створення та ведення провідних соціальних мереж
+                            від імені бренду
+                        </p>
+                        <p>
+                            Створення іміджу, підвищення лояльності та
+                            впізнаваності бренду
+                        </p>
+                        <p>Залучення та монетизація цільової аудиторії</p>
+                        <p>
+                            Розробка, створення та просування якісного
+                            контенту
+                        </p>
+                        <p>Проведення розіграшів, конкурсів, трансляцій</p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga7.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>ТАРГЕТОВАНА РЕКЛАМА</h3>
+                        </div>
+                        <p>Формування ЦА</p>
+                        <p>Аналіз конкурентів</p>
+                        <p>А/В тестування</p>
+                        <p>Створення, запуск та масштабування РК</p>
+                        <p>Аналітичний аналіз та звітність</p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga8.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>
+                                СТВОРЕННЯ ТА ПРОСУВАННЯ DIGITAL КОНТЕНТУ
+                            </h3>
+                        </div>
+                        <p>
+                            Створення та промоції якісного цифрового
+                            контенту
+                        </p>
+                        <p>
+                            Створення навчального, розважального, вірусного
+                            контенту
+                        </p>
+                        <p>Привернення уваги аудиторії до бренду</p>
+                        <p>
+                            Inbound marketing як доступна заміна
+                            нав&#8217;язливій рекламі
+                        </p>
+                        <p>
+                            Завоювання ринку цікавим та корисним контентом
+                        </p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga9.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>АРБІТРАЖ ТРАФІКУ</h3>
+                        </div>
+                        <p>Гарантоване залучення високоякісного трафіку</p>
+                        <p>
+                            Вертикаль: гемблінг, беттінг, детинг, крипта,
+                            кіберспорт
+                        </p>
+                        <p>Джерело: Google, facebook, in-app</p>
+                        <p>Модель роботи CPA, CPM, CPI</p>
+                        <p>
+                            Працюємо безпосередньо з рекламодавцями, що дає
+                            нам найкращі умови на ринку
+                        </p>
+                    </div>
+                </div>
+                <!-- USL -->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div
+                        class="services_block"
+                        data-scroll="toggle(.fromLeftIn, .fromLeftOut) addHeight">
+                        <div class="topborder">
+                            <img
+                                src="{% static 'img/services-img-top.png' %}"
+                                alt="" />
+                        </div>
+                        <div class="zsb">
+                            <div>
+                                <img
+                                    src="{% static 'img/usluga10.svg' %}"
+                                    alt="" />
+                            </div>
+                            <h3>Affiliate Marketing</h3>
+                        </div>
+                        <p>Пошук та супровід новий інтернет партнерів</p>
+                        <p>Ведення переговорів із існуючими партнерами</p>
+                        <p>Створення креативів</p>
+                        <p>Аналіз конкурентів та трендів</p>
+                        <p>
+                            Створення, наповнення та ведення соціальних
+                            мереж
+                        </p>
+                        <p>Аналітика та звітність</p>
+                    </div>
+                </div>
+                <!-- USL -->
+            </div>
+        </div>
+    </div>
+    <div id="cases" class="case">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2>Кейси</h2>
+                    <p>
+                        Тапніть по картці,<br />щоб побачити більше
+                        інформації
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-w-flip">
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>Gorilla</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/gorilla-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/gorilla-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/gorilla-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/gorilla-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">20k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">10М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span
+                                            >пошук + закупівля influence
+                                            майданчиків, продакшн та
+                                            промоушн контенту</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">UA/RUS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>Elslots</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/elslots-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/elslots-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/elslots-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/elslots-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">50k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">30М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span
+                                            >підбір блогерів, створення
+                                            сезонних промо кампаній,
+                                            продакшн та промоушн</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">UA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>Favbet</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/logo-favbet.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/logo-favbet.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/logo-favbet.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/logo-favbet.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">20k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">9М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span>розробка/промо/продакшн</span>
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">UA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>Currency</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/currency-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/currency-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/currency-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/currency-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">10k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">4-10М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span
+                                            >Закупівля блогерів у вузькому
+                                            сегменті</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">RUS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>1Win</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/1-win-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/1-win-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/1-win-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/1-win-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">50k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">20М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span
+                                            >підбір блогерів, оптова
+                                            закупівля інтеграцій</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">RUS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>1XBet</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/1xbet-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/1xbet-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/1xbet-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/1xbet-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">20k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">11М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span>розробка/промо/продакшн</span>
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">UA/RUS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>Pari Match</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/logo-pari-match.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/logo-pari-match.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/logo-pari-match.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/logo-pari-match.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">10k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">5М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span
+                                            >підбір лідерів думок / розробка
+                                            та створення / продакшн та
+                                            промоушн контент</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">UA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>Lev</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/lev-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/lev-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/lev-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/lev-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">100k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">50-60М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span
+                                            >підбір блогерів, розробка
+                                            інтеграцій та акцій, промоушен,
+                                            створення брендованого товару з
+                                            0</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">UA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+            <div class="slide-flip">
+                <div class="flip-container">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="case-block">
+                                <h3>Aura</h3>
+                                <div class="case-block-img">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/aura-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/aura-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FRONT -->
+
+                        <div class="back">
+                            <div class="case-block">
+                                <div class="logotopflip">
+                                    <picture
+                                        ><source
+                                            srcset="{% static 'img/aura-logo.png.webp' %}"
+                                            type="image/webp" />
+                                        <img
+                                            src="{% static 'img/aura-logo.png' %}"
+                                            alt=""
+                                            class="webpexpress-processed"
+                                    /></picture>
+                                </div>
+
+                                <div class="caseb">
+                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">20k$</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">2М</div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">
+                                        <span
+                                            >розробка/продакшн/ промоушн
+                                            рекламного контенту</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="caseb">
+                                    <div class="casebleft">Гео</div>
+                                    <div class="casebcenter"></div>
+                                    <div class="casebright">UA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                    </div>
+                    <!-- Flipper -->
+                </div>
+                <!-- flip-container -->
+            </div>
+        </div>
+    </div>
+    <div id="partners" class="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2>Партнери</h2>
+                </div>
+            </div>
+        </div>
+        <div class="partners-list">
+            <div class="partner">
+                <div class="fp-img">
+                    <a href="https://1win.pro/bets/home"
+                        ><picture
+                            ><source
+                                srcset="{% static 'img/1-win-logo.png.webp' %}"
+                                type="image/webp" />
+                            <img
+                                src="{% static 'img/1-win-logo.png' %}"
+                                alt=""
+                                class="webpexpress-processed" /></picture
+                    ></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a href="https://www.favbet.com/"
+                        ><picture
+                            ><source
+                                srcset="{% static 'img/logo-favbet.png.webp' %}"
+                                type="image/webp" />
+                            <img
+                                src="{% static 'img/logo-favbet.png' %}"
+                                alt=""
+                                class="webpexpress-processed" /></picture
+                    ></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a href="https://1xbet.com/"
+                        ><picture
+                            ><source
+                                srcset="{% static 'img/1xbet-logo.png.webp' %}"
+                                type="image/webp" />
+                            <img
+                                src="{% static 'img/1xbet-logo.png' %}"
+                                alt=""
+                                class="webpexpress-processed" /></picture
+                    ></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a href="https://elslotswin.com/#register"
+                        ><img
+                            src="{% static 'img/partn4.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a href="https://aura.social/"
+                        ><picture
+                            ><source
+                                srcset="{% static 'img/aura-logo.png.webp' %}"
+                                type="image/webp" />
+                            <img
+                                src="{% static 'img/aura-logo.png' %}"
+                                alt=""
+                                class="webpexpress-processed" /></picture
+                    ></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a
+                        href="https://instagram.com/abstractstoreofficial?igshid=YmMyMTA2M2Y="
+                        ><img
+                            src="{% static 'img/partn6.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a href="https://ru.m.wikipedia.org/wiki/UFL"
+                        ><img
+                            src="{% static 'img/partn7.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a
+                        href="https://www.instagram.com/go__gorilla/?igshid=YmMyMTA2M2Y="
+                        ><img
+                            src="{% static 'img/partn8.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a href="https://victorylevis.xyz/"
+                        ><img
+                            src="{% static 'img/partn9.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="fp-img">
+                    <a
+                        href="https://instagram.com/marbleuniversum?igshid=YmMyMTA2M2Y="
+                        ><img
+                            src="{% static 'img/partn10.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bloggers" class="bloggers">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2>Блогери</h2>
+                </div>
+            </div>
+            <div class="slider-blogs">
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/skaif_ura/?igshid=YmMyMTA2M2Y="
+                            >skaif_ura</a
+                        >
+                    </h6>
+                    <a
+                        href="https://www.instagram.com/skaif_ura/?igshid=YmMyMTA2M2Y="
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/blogger1.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/blogger1.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>164к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/the.madaa/?igshid=YmMyMTA2M2Y="
+                            >the.madaa</a
+                        >
+                    </h6>
+                    <a
+                        href="https://www.instagram.com/the.madaa/?igshid=YmMyMTA2M2Y="
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/blogger2.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/blogger2.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>58к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/lusuy.channel/?igshid=YmMyMTA2M2Y="
+                            >lusuy.channel</a
+                        >
+                    </h6>
+                    <a
+                        href="https://www.instagram.com/lusuy.channel/?igshid=YmMyMTA2M2Y="
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/blogger3.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/blogger3.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>150к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/naz_kamaz/?igshid=YmMyMTA2M2Y="
+                            >naz_kamaz</a
+                        >
+                    </h6>
+                    <a
+                        href="https://www.instagram.com/naz_kamaz/?igshid=YmMyMTA2M2Y="
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/blogger4.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/blogger4.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>200к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/hatebloggers/?igshid=YmMyMTA2M2Y="
+                            >hatebloggers</a
+                        >
+                    </h6>
+                    <a
+                        href="https://www.instagram.com/hatebloggers/?igshid=YmMyMTA2M2Y="
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/blogger5.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/blogger5.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>140к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://instagram.com/hatebloggers?igshid=YmMyMTA2M2Y="
+                            >sergiy.bunda</a
+                        >
+                    </h6>
+                    <a
+                        href="https://instagram.com/hatebloggers?igshid=YmMyMTA2M2Y="
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/blogger6.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/blogger6.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>164к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/pashalimbleat/?igshid=YmMyMTA2M2Y="
+                            >pashalimbleat</a
+                        >
+                    </h6>
+                    <a
+                        href="https://www.instagram.com/pashalimbleat/?igshid=YmMyMTA2M2Y="
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/blogger7.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/blogger7.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>365к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/meshtiish/?igshid=YmMyMTA2M2Y%3D"
+                            >meshtiish</a
+                        >
+                    </h6>
+                    <a
+                        href="https://www.instagram.com/meshtiish/?igshid=YmMyMTA2M2Y%3D"
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/meshtiish.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/meshtiish.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>70к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a
+                            href="https://www.instagram.com/andrey.martynenko/"
+                            >andrey.martynenko</a
+                        >
+                    </h6>
+                    <a href="https://www.instagram.com/andrey.martynenko/"
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/martynenko.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/martynenko.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>407к підписників в instagram</p>
+                </div>
+                <div class="blogger">
+                    <h6>
+                        <a href="https://www.instagram.com/zabolotnuygolos/"
+                            >zabolotnuygolos</a
+                        >
+                    </h6>
+                    <a href="https://www.instagram.com/zabolotnuygolos/"
+                        ><img
+                            class="blogger-arrow"
+                            src="{% static 'img/arrow.svg' %}"
+                            alt=""
+                    /></a>
+                    <picture
+                        ><source
+                            srcset="{% static 'img/zabolotnuygolos.jpg.webp' %}"
+                            type="image/webp" />
+                        <img
+                            class="blogger-img webpexpress-processed"
+                            src="{% static 'img/zabolotnuygolos.jpg' %}"
+                            alt=""
+                    /></picture>
+                    <p>66к підписників в instagram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contacts" class="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2>Контакти</h2>
+                    <h3>Заповніть форму або напишіть нам</h3>
+                </div>
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <form action="send2.php" method="post">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                                <div class="form_left">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Им’я"
+                                        required />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Пошта"
+                                        required />
+                                    <input
+                                        type="text"
+                                        name="link"
+                                        placeholder="Посилання на проєкт"
+                                        required />
+                                    <input
+                                        type="text"
+                                        name="budget"
+                                        placeholder="Рекламний бюджет"
+                                        required />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                                <div class="form_right">
+                                    <textarea
+                                        name="text"
+                                        placeholder="Повідомлення"
+                                        rows="7"></textarea>
+                                    <button type="submit">
+                                        Відправити
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-12 col-xl-5">
+                    <div class="cont">
+                        <img
+                            src="{% static 'img/icon-phone.svg' %}"
+                            alt="" />
+                        <a href="tel:+38 096 0896265">+38 096 0896265</a>
+                    </div>
+                    <div class="cont">
+                        <img
+                            src="{% static 'img/icon-post.svg' %}"
+                            alt="" />
+                        <a href="mailto:hustlerdigitalagency@gmail.com"
+                            >hustlerdigitalagency@gmail.com</a
+                        >
+                    </div>
+                    <div class="cont">
+                        <img
+                            src="{% static 'img/icon-telegram.svg' %}"
+                            alt="" />
+                        <a href="https://t.me/hustleragency"
+                            >@hustleragency</a
+                        >
+                    </div>
+                </div>
+                <div class="col-12 col-md-1 col-lg-12 col-xl-2">
+                    <a class="arrow-top" href="#main"
+                        ><img
+                            src="{% static 'img/ArrowUp.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+                <div
+                    class="col-12 col-md-5 col-lg-12 col-xl-5 footer-right">
+                    <a href="/"
+                        ><img
+                            src="{% static 'img/Logo_hustlerdigital-11.svg' %}"
+                            alt=""
+                    /></a>
+                    <p>© 2022 HUSTLER DIGITAL</p>
+                    <p>
+                        <a href="/uk/privacy-policy/"
+                            >Політика конфіденційності</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/metismenujs.js' %}"></script>
+    <script src="{% static 'js/onoffcanvas.js' %}"></script>
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/mm-onoffcanvas.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollmagic.min.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+
+    <script>
+        $(".slider-w-flip").slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        dots: true,
+                        arrows: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false
+                    }
+                }
+            ]
+        });
+
+        $(".slider-blogs").slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        dots: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        dots: false,
+                        arrows: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false
+                    }
+                }
+            ]
+        });
+    </script>
+
+    <script>
+        $(document).on("scroll", window, function () {
+            var element = document.getElementById("header");
+            if ($(window).scrollTop() > 250) {
+                element.classList.add("scroll");
+            } else {
+                element.classList.remove("scroll");
+            }
+        });
+    </script>
+
+    <script>
+        window.counter = function () {
+            var span = this.querySelector("span");
+            var current = parseInt(span.textContent);
+
+            span.textContent = current + 1;
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            ScrollTrigger.init();
+        });
+    </script>
+
+    <script>
+        $(".flip-container").click(function () {
+            $(".flip-container").toggleClass("active");
+        });
+
+        function countTo(number, selector, before, after) {
+            if (!selector) return;
+
+            let from = 0;
+            let to = number;
+            let step = 1;
+            let duration = 5;
+            let interval = (duration / number) * 1000;
+
+            if (from == to) {
+                document.querySelector(selector).textContent =
+                    before + from + after;
+                return;
+            }
+
+            let counter = setInterval(function () {
+                from += step;
+                document.querySelector(selector).textContent =
+                    before + from + after;
+
+                if (from == to) {
+                    clearInterval(counter);
+                }
+            }, interval);
+        }
+        countTo(10, ".num1", "", "+");
+        countTo(28, ".num2", "", "");
+        countTo(100, ".num3", ">", "M");
+        countTo(120, ".num4", "", "+");
+    </script>
+{% endblock %}

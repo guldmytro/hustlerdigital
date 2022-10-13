@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Hustler Digital — це ідеальне combo з ефективних інструментів маркетингу, експірієнс і лідерів думок." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta itemprop="description" content="Hustler Digital — це ідеальне combo з ефективних інструментів маркетингу, експірієнс і лідерів думок." />
+    <meta property="og:title" content="Hustler" />
+    <meta property="og:type" content="site" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Hustler Digital — це ідеальне combo з ефективних інструментів маркетингу, експірієнс і лідерів думок." />
+    <meta property="og:site_name" content="Hustler" />
+    <meta name="robots" content="max-image-preview:large" />
+    <title>{% block title %}Home{% endblock %} - Hustler</title>
+    <meta name="description" content="Hustler Digital — это идеальное combo из эффективных инструментов маркетинга, экспириенса и лидеров мнений." />
+    <link rel="stylesheet" href="{% static 'css/cms-navigation-base.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/cms-navigation.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/metismenujs.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/onoffcanvas.min.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/mm-onoffcanvas.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/lightbox.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/anims.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <script src="{% static 'js/script.min.js' %}"></script>
+    <link rel="icon" href="{% static 'img/cropped-favicon-1-32x32.png' %}" sizes="32x32' %}" />
+    <link rel="icon" href="{% static 'img/cropped-favicon-1-192x192.png' %}" sizes="192x192' %}" />
+    <link rel="apple-touch-icon" href="{% static 'img/cropped-favicon-1-180x180.png' %}" />
+    <meta name="msapplication-TileImage" content="{% static 'img/cropped-favicon-1-270x270.png' %}" />
+</head>
+<body>
+    <div class="onoffcanvas is-fixed is-left bg-dark text-white left-aside p-1" id="left-aside">
+        <div class="d-flex p-4 justify-content-end">
+            <a href="index.html"
+                ><img
+                    src="{% static 'img/logo.svg' %}"
+                    alt=""
+            /></a>
+            <a
+                href="#left-aside"
+                class="onoffcanvas-toggler is-animated"
+                data-toggle="onoffcanvas"
+                style="width: 24px; height: 24px; display: none"></a>
+        </div>
+        <ul class="metismenu left-menu" id="menu2">
+            <li>
+                <a href="#uslugi"
+                    ><span
+                        data-target="#left-aside"
+                        data-toggle="onoffcanvas"
+                        aria-expanded="false"
+                        >Послуги</span
+                    ></a
+                >
+            </li>
+            <li>
+                <a href="#cases"
+                    ><span
+                        data-target="#left-aside"
+                        data-toggle="onoffcanvas"
+                        aria-expanded="false"
+                        >Кейси</span
+                    ></a
+                >
+            </li>
+            <li>
+                <a href="#partners"
+                    ><span
+                        data-target="#left-aside"
+                        data-toggle="onoffcanvas"
+                        aria-expanded="false"
+                        >Партнери</span
+                    ></a
+                >
+            </li>
+            <li>
+                <a href="#bloggers"
+                    ><span
+                        data-target="#left-aside"
+                        data-toggle="onoffcanvas"
+                        aria-expanded="false"
+                        >Блогери</span
+                    ></a
+                >
+            </li>
+            <li>
+                <a href="#contacts"
+                    ><span
+                        data-target="#left-aside"
+                        data-toggle="onoffcanvas"
+                        aria-expanded="false"
+                        >Контакти</span
+                    ></a
+                >
+            </li>
+        </ul>
+    </div>
+    <div id="header" class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-6 col-xl-5 logo-top">
+                    <a href="/"
+                        ><img
+                            src="{% static 'img/Logo_hustlerdigital-11.svg' %}"
+                            alt=""
+                    /></a>
+                </div>
+                <div class="col-1 col-md-1 col-lg-1 col-xl-6 menu-top">
+                    <a href="#uslugi"
+                        >Послуги</a
+                    >
+                    <a href="#cases">Кейси</a>
+                    <a href="#partners"
+                        >Партнери</a
+                    >
+                    <a href="#bloggers"
+                        >Блогери</a
+                    >
+                    <a href="#contacts"
+                        >Контакти</a
+                    >
+                </div>
+                <div class="col-3 col-md-2 col-lg-2 col-xl-1 lang">
+                    <div
+                        class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown-click js-wpml-ls-legacy-dropdown-click">
+                        <ul>
+                            <li
+                                class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-uk wpml-ls-current-language wpml-ls-last-item wpml-ls-item-legacy-dropdown-click">
+                                <a
+                                    href="#"
+                                    class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
+                                    <span class="wpml-ls-native"
+                                        >UA</span
+                                    ></a
+                                >
+
+                                <ul
+                                    class="js-wpml-ls-sub-menu wpml-ls-sub-menu">
+                                    <li
+                                        class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item">
+                                        <a
+                                            href="http://hustlerdigital.pro/en/"
+                                            class="wpml-ls-link">
+                                            <span class="wpml-ls-display"
+                                                >EN</span
+                                            ></a
+                                        >
+                                    </li>
+                                    <li
+                                        class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru">
+                                        <a
+                                            href="http://hustlerdigital.pro"
+                                            class="wpml-ls-link">
+                                            <span class="wpml-ls-display"
+                                                >RU</span
+                                            ></a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <a
+                        href="#left-aside"
+                        class="toggle-nav onoffcanvas-toggler is-animated navbg"
+                        type="button"
+                        data-toggle="onoffcanvas"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+    {% block scripts %}{% endblock %}
+</body>
+</html>
