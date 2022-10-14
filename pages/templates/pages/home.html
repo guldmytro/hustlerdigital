@@ -1,5 +1,6 @@
 {% extends 'layout/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
     <div id="main" class="main">
@@ -21,32 +22,36 @@
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12">
                     <h1>
-                        НЕ ГОНИСЯ ЗА ТРЕНДАМИ.<br />
-                        СТВОРЮЙ ЇХ.
+                        {% blocktrans %}
+                            DON’T CHASE TRENDS.<br />
+                            SET THEM.
+                        {% endblocktrans %}
                     </h1>
                     <h2>
-                        Послуги онлайн просування, розробки<br />
-                        та запровадження стратегії influence-маркетингу
+                        {% blocktrans %}
+                            Online promotion services, development<br />
+                            and implementation of an influence marketing strategy
+                        {% endblocktrans %}
                     </h2>
-                    <a class="btn btn-white" href="#contacts">Зв'язатися</a>
+                    <a class="btn btn-white" href="#contacts">{% trans "Contact us" %}</a>
                 </div>
             </div>
             <div class="row numses">
                 <div class="col-12 col-md-6 col-xl-3 col-lg-3">
                     <div class="nums num1">0+</div>
-                    <p>світових брендів, які співпрацюють</p>
+                    <p>{% trans "Global brands that cooperate with us" %}</p>
                 </div>
                 <div class="col-12 col-md-6 col-xl-3 col-lg-3">
                     <div class="nums num2">0</div>
-                    <p>Найдовше LTV</p>
+                    <p>{% trans "Months — longest LTV" %}</p>
                 </div>
                 <div class="col-12 col-md-6 col-xl-3 col-lg-3">
                     <div class="nums num3">>0М</div>
-                    <p>Загальне охоплення бази блогерів</p>
+                    <p>{% trans "Total coverage of the base of bloggers is above" %}</p>
                 </div>
                 <div class="col-12 col-md-6 col-xl-3 col-lg-3">
                     <div class="nums num4">0+</div>
-                    <p>Рекламних кампаній запущено цього року</p>
+                    <p>{% trans "Advertising campaigns launched this year" %}</p>
                 </div>
             </div>
         </div>
@@ -55,15 +60,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-xl-6 col-lg-6">
-                    <h2>Про нас</h2>
+                    <h2>{% trans "About" %}</h2>
                 </div>
                 <div class="col-12 col-md-12 col-xl-6 col-lg-6">
                     <div class="aub">
                         <div class="aub1">Hustler Digital</div>
                         <div class="aub2">
-                            — це ідеальне combo з ефективних інструментів
-                            маркетингу, експірієнс<br />
-                            і лідерів думок.
+                            {% blocktrans %}
+                                — is the perfect combo of effective marketing tools, experience and influencers.
+                            {% endblocktrans %}
                         </div>
                     </div>
                 </div>
@@ -75,31 +80,15 @@
             <div class="row">
                 <div
                     class="col-12 col-md-12 col-lg-12 col-xl-6 orderhustler2">
-                    <h2>Знайомтесь -<br />HUSTLER</h2>
-                    <p>
-                        У 2021 році кілька менеджерів та медіабаєрів
-                        запустили машину зі створення та просування
-                        контенту. Так виник HUSTLER — креативне агентство
-                        fullstack просування.
-                    </p>
-                    <p>
-                        За останні роки ми організували понад 1000
-                        інтеграцій<br />
-                        у блогерів різного рівня, реалізували близько 100
-                        рекламних кампаній, встигли співпрацювати з 30+
-                        гемблінг-проектами, серед яких бренди зі світовим
-                        ім&#8217;ям.
-                    </p>
-                    <p>
-                        Звертаючись до нас, ви отримуєте не просто
-                        підрядника у вигляді агентства, а виділену in-house
-                        команду на аутсорсі з низкою переваг.
-                    </p>
-                    <p>
-                        Основними напрямками агентства є: influence
-                        marketing, брендинг, арбітраж трафіку, виробництво
-                        та просування контенту.
-                    </p>
+                    {% blocktrans %}
+                        <h2>Meet <br> HUSTLER</h2>
+                    {% endblocktrans %}
+                    {% blocktrans %}
+                        <p>In 2021, several managers and media buyers launched a content creation and promotion machine. This is how HUSTLER appeared &#8211; a creative full-stack promotion agency.</p>
+                        <p>In recent years, we have organized more than 1,000 integrations with bloggers of various levels, implemented about 100 advertising campaigns, and managed to cooperate with 30+ gambling projects, including world-famous brands.</p>
+                        <p>Working with us, you get not just a contractor in the form of an agency, but a dedicated in-house outsourcing team with a number of advantages.</p>
+                        <p>The main directions of the agency are influence marketing, branding, traffic arbitrage, content production and promotion.</p>
+                    {% endblocktrans %}
                 </div>
                 <div
                     class="col-12 col-md-8 col-lg-12 col-xl-6 orderhustler1">
@@ -136,7 +125,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2>Послуги агенції</h2>
+                    <h2>{% trans "Agency services" %}</h2>
                 </div>
 
                 <div class="col-12 col-md-12 col-lg-12 col-xl-6">
@@ -155,21 +144,15 @@
                                     alt="" />
                             </div>
                             <h3>
-                                INFLUENCER MARKETING ЕКСКЛЮЗИВНИЙ INFLUENCER
+                                {% trans "INFLUENCER MARKETING EXCLUSIVE INFLUENCER" %}
                             </h3>
                         </div>
-                        <p>
-                            Рекламні інтеграції у блогерів та лідерів думок
-                        </p>
-                        <p>
-                            Організація онлайн трансляцій з топовими
-                            стрімерами
-                        </p>
-                        <p>Залучення гравців у сфері гемблінгу/беттингу</p>
-                        <p>
-                            Розробка, створення та промоушен онлайн та
-                            офлайн івентів з лідерами думок
-                        </p>
+                        {% blocktrans %}
+                            <p>Advertising integrations for bloggers and influencers</p>
+                            <p>Organization of online broadcasts with top streamers</p>
+                            <p>Attracting players in the field of gambling / betting</p>
+                            <p>Development, creation and promotion of online and offline events with opinion leaders</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -188,15 +171,16 @@
                                     src="{% static 'img/usluga2.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>DIGITAL КРЕАТИВ & ПРОДАКШН</h3>
+                            <h3>
+                                {% trans "DIGITAL CREATIVE & PRODUCTION" %}
+                            </h3>
                         </div>
-                        <p>
-                            Створення та ведення корпоративних каналів
-                            YouTube / Twitch
-                        </p>
-                        <p>Розробка брендингу та корпоративного стилю</p>
-                        <p>Створення креативних промоматеріалів</p>
-                        <p>Створення іміджевих відеороликів</p>
+                        {% blocktrans %}
+                            <p>Creation and maintenance of corporate channels YouTube / Twitch</p>
+                            <p>Development of branding and corporate style</p>
+                            <p>Creation of creative promotional materials</p>
+                            <p>Creation of image videos</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -215,18 +199,14 @@
                                     src="{% static 'img/usluga3.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>РОЗРОБКА РЕКЛАМНИХ СТРАТЕГІЙ</h3>
+                            <h3>{% trans "DEVELOPMENT OF ADVERTISING STRATEGIES" %}</h3>
                         </div>
-                        <p>
-                            Розробка рекламної стратегії з 0 під різні
-                            бізнес завдання
-                        </p>
-                        <p>
-                            Підвищення впізнаваності та лояльності бренду на
-                            ринку
-                        </p>
-                        <p>Пошук нових та утримання старих клієнтів</p>
-                        <p>Формування позиціонування серед ЦА</p>
+                        {% blocktrans %}
+                            <p>Development of an advertising strategy from scratch for different business tasks</p>
+                            <p>Increasing brand awareness and loyalty in the market</p>
+                            <p>Finding new and retaining old customers</p>
+                            <p>Formation of positioning among the target audience</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -245,21 +225,14 @@
                                     src="{% static 'img/usluga4.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>RESEARCH & DEVELOPMENT</h3>
+                            <h3>{% trans "RESEARCH & DEVELOPMENT" %}</h3>
                         </div>
-                        <p>Загальна оцінка та аналіз проекту</p>
-                        <p>
-                            Пророблення прогалин та невикористаних
-                            можливостей
-                        </p>
-                        <p>
-                            Підбір та впровадження готових рішень під різні
-                            бізнес-завдання
-                        </p>
-                        <p>
-                            Рекомендації щодо подальшого розвитку на
-                            існуючому та потенційному ринках
-                        </p>
+                        {% blocktrans %}
+                            <p>Overall evaluation and analysis of the project</p>
+                            <p>Exploring gaps and untapped opportunities</p>
+                            <p>Selection and implementation of ready-made solutions for various business tasks</p>
+                            <p>Recommendations for further development in existing and potential markets</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -278,32 +251,16 @@
                                     src="{% static 'img/usluga5.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>MEDIA BUYING</h3>
+                            <h3>{% trans "MEDIA BUYING" %}</h3>
                         </div>
-                        <p>
-                            Розміщення реклами на майданчиках із
-                            максимальним охопленням ЦА
-                        </p>
-                        <p>
-                            Медіапланування, зрозумілий та швидкий процес
-                            закупівлі, аналіз ринку та переговори
-                        </p>
-                        <p>
-                            Зрозуміла аналітика, можливість кастомізувати
-                            параметри, оптимізація
-                        </p>
-                        <p>
-                            Робота з унікальними майданчиками – Pornhub,
-                            OnlyFans, TikTok
-                        </p>
-                        <p>
-                            Підготовка матеріалів відповідно до технічних
-                            вимог паблішерів
-                        </p>
-                        <p>
-                            Підбиття підсумків, звітність, аналіз
-                            ефективності
-                        </p>
+                        {% blocktrans %}
+                            <p>Placement of advertising on sites with maximum coverage of the target audience</p>
+                            <p>Media planning, clear and fast procurement process, market analysis and negotiations</p>
+                            <p>Clear analytics, the ability to customize parameters, optimization</p>
+                            <p>Working with unique sites &#8211; Pornhub, OnlyFans, TikTok</p>
+                            <p>Preparation of materials in accordance with the technical requirements of publishers</p>
+                            <p>Summing up, reporting, performance analysis</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -322,22 +279,15 @@
                                     src="{% static 'img/usluga6.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>SOCIAL MEDIA MARKETING</h3>
+                            <h3>{% trans "SOCIAL MEDIA MARKETING" %}</h3>
                         </div>
-                        <p>
-                            Створення та ведення провідних соціальних мереж
-                            від імені бренду
-                        </p>
-                        <p>
-                            Створення іміджу, підвищення лояльності та
-                            впізнаваності бренду
-                        </p>
-                        <p>Залучення та монетизація цільової аудиторії</p>
-                        <p>
-                            Розробка, створення та просування якісного
-                            контенту
-                        </p>
-                        <p>Проведення розіграшів, конкурсів, трансляцій</p>
+                        {% blocktrans %}
+                            <p>Creation and maintenance of leading social networks on behalf of the brand</p>
+                            <p>Creating an image, increasing loyalty and brand awareness</p>
+                            <p>Attracting and monetizing the target audience</p>
+                            <p>Development, creation and promotion of quality content</p>
+                            <p>Holding draws, competitions, broadcasts</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -356,13 +306,15 @@
                                     src="{% static 'img/usluga7.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>ТАРГЕТОВАНА РЕКЛАМА</h3>
+                            <h3>{% trans "TARGETED ADVERTISING" %}</h3>
                         </div>
-                        <p>Формування ЦА</p>
-                        <p>Аналіз конкурентів</p>
-                        <p>А/В тестування</p>
-                        <p>Створення, запуск та масштабування РК</p>
-                        <p>Аналітичний аналіз та звітність</p>
+                        {% blocktrans %}
+                            <p>Formation of CA</p>
+                            <p>Competitor analysis</p>
+                            <p>A/B testing</p>
+                            <p>Creation, launch and scaling of RK</p>
+                            <p>Analytical analysis and reporting</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -382,25 +334,16 @@
                                     alt="" />
                             </div>
                             <h3>
-                                СТВОРЕННЯ ТА ПРОСУВАННЯ DIGITAL КОНТЕНТУ
+                                {% trans "CREATION AND PROMOTION OF DIGITAL CONTENT" %}
                             </h3>
                         </div>
-                        <p>
-                            Створення та промоції якісного цифрового
-                            контенту
-                        </p>
-                        <p>
-                            Створення навчального, розважального, вірусного
-                            контенту
-                        </p>
-                        <p>Привернення уваги аудиторії до бренду</p>
-                        <p>
-                            Inbound marketing як доступна заміна
-                            нав&#8217;язливій рекламі
-                        </p>
-                        <p>
-                            Завоювання ринку цікавим та корисним контентом
-                        </p>
+                        {% blocktrans %}
+                            <p>Creation and promotion of high-quality digital content</p>
+                            <p>Creation of educational, entertaining, viral content</p>
+                            <p>Attracting the attention of the audience to the brand</p>
+                            <p>Inbound marketing as an affordable replacement for intrusive advertising</p>
+                            <p>Conquering the market with interesting and useful content</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -419,19 +362,17 @@
                                     src="{% static 'img/usluga9.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>АРБІТРАЖ ТРАФІКУ</h3>
+                            <h3>
+                                {% trans "TRAFFIC ARBITRAGE" %}
+                            </h3>
                         </div>
-                        <p>Гарантоване залучення високоякісного трафіку</p>
-                        <p>
-                            Вертикаль: гемблінг, беттінг, детинг, крипта,
-                            кіберспорт
-                        </p>
-                        <p>Джерело: Google, facebook, in-app</p>
-                        <p>Модель роботи CPA, CPM, CPI</p>
-                        <p>
-                            Працюємо безпосередньо з рекламодавцями, що дає
-                            нам найкращі умови на ринку
-                        </p>
+                        {% blocktrans %}
+                            <p>Guaranteed attraction of high-quality traffic</p>
+                            <p>Vertical: gambling, betting, dating, crypto, eSports</p>
+                            <p>Source: Google, facebook, in-app</p>
+                            <p>CPA, CPM, CPI work model</p>
+                            <p>We work directly with advertisers, which gives us the best conditions on the market</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -450,17 +391,18 @@
                                     src="{% static 'img/usluga10.svg' %}"
                                     alt="" />
                             </div>
-                            <h3>Affiliate Marketing</h3>
+                            <h3>
+                                {% trans "Affiliate Marketing" %}
+                            </h3>
                         </div>
-                        <p>Пошук та супровід новий інтернет партнерів</p>
-                        <p>Ведення переговорів із існуючими партнерами</p>
-                        <p>Створення креативів</p>
-                        <p>Аналіз конкурентів та трендів</p>
-                        <p>
-                            Створення, наповнення та ведення соціальних
-                            мереж
-                        </p>
-                        <p>Аналітика та звітність</p>
+                        {% blocktrans %}
+                            <p>Search and maintenance of new Internet partners</p>
+                            <p>Negotiating with existing partners</p>
+                            <p>Creation of creatives</p>
+                            <p>Analysis of competitors and trends</p>
+                            <p>Creation, filling and maintenance of social networks</p>
+                            <p>Analytics and reporting</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 <!-- USL -->
@@ -473,7 +415,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2>Блогери</h2>
+                    <h2>{% trans "Bloggers" %}</h2>
                 </div>
             </div>
             <div class="slider-blogs">
@@ -500,7 +442,7 @@
                             src="{% static 'img/blogger1.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>164к підписників в instagram</p>
+                    <p>164к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -525,7 +467,7 @@
                             src="{% static 'img/blogger2.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>58к підписників в instagram</p>
+                    <p>58к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -550,7 +492,7 @@
                             src="{% static 'img/blogger3.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>150к підписників в instagram</p>
+                    <p>150к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -575,7 +517,7 @@
                             src="{% static 'img/blogger4.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>200к підписників в instagram</p>
+                    <p>200к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -600,7 +542,7 @@
                             src="{% static 'img/blogger5.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>140к підписників в instagram</p>
+                    <p>140к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -625,7 +567,7 @@
                             src="{% static 'img/blogger6.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>164к підписників в instagram</p>
+                    <p>164к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -650,7 +592,7 @@
                             src="{% static 'img/blogger7.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>365к підписників в instagram</p>
+                    <p>365к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -675,7 +617,7 @@
                             src="{% static 'img/meshtiish.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>70к підписників в instagram</p>
+                    <p>70к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -699,7 +641,7 @@
                             src="{% static 'img/martynenko.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>407к підписників в instagram</p>
+                    <p>407к {% trans 'instagram followers' %}</p>
                 </div>
                 <div class="blogger">
                     <h6>
@@ -722,7 +664,7 @@
                             src="{% static 'img/zabolotnuygolos.jpg' %}"
                             alt=""
                     /></picture>
-                    <p>66к підписників в instagram</p>
+                    <p>66к {% trans 'instagram followers' %}</p>
                 </div>
             </div>
         </div>
@@ -731,44 +673,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2>Контакти</h2>
-                    <h3>Заповніть форму або напишіть нам</h3>
+                    <h2>{% trans "Contacts" %}</h2>
+                    <h3>{% trans "Fill out the form or write to us" %}</h3>
                 </div>
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                    <form action="send2.php" method="post">
+                    <form id="contact-form" action="{% url 'pages:home' %}" method="post">
                         <div class="row">
                             <div class="col-12 col-md-6 col-lg-12 col-xl-6">
                                 <div class="form_left">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Им’я"
-                                        required />
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Пошта"
-                                        required />
-                                    <input
-                                        type="text"
-                                        name="link"
-                                        placeholder="Посилання на проєкт"
-                                        required />
-                                    <input
-                                        type="text"
-                                        name="budget"
-                                        placeholder="Рекламний бюджет"
-                                        required />
+                                    {{ contact_form.name }}
+                                    {{ contact_form.email }}
+                                    {{ contact_form.link }}
+                                    {{ contact_form.budget }}
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-12 col-xl-6">
                                 <div class="form_right">
-                                    <textarea
-                                        name="text"
-                                        placeholder="Повідомлення"
-                                        rows="7"></textarea>
-                                    <button type="submit">
-                                        Відправити
+                                    {{ contact_form.message }}
+                                    {% csrf_token %}
+                                    <button type="submit" data-loading="{% trans 'Sending...' %}" data-success="{% trans 'Sent!' %}" data-error="{% trans 'Error' %}">
+                                        {% trans "Send" %}
                                     </button>
                                 </div>
                             </div>
@@ -819,9 +743,9 @@
                     /></a>
                     <p>© 2022 HUSTLER DIGITAL</p>
                     <p>
-                        <a href="/uk/privacy-policy/"
-                            >Політика конфіденційності</a
-                        >
+                        <a href="/uk/privacy-policy/">
+                            {% trans "Privacy Policy" %}
+                        </a>
                     </p>
                 </div>
             </div>
@@ -838,7 +762,7 @@
     <script src="{% static 'js/mm-onoffcanvas.js' %}"></script>
     <script src="{% static 'js/jquery.scrollmagic.min.js' %}"></script>
     <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
-
+    <script src="{% static 'js/index.js' %}"></script>
     <script>
         $(".slider-w-flip").slick({
             dots: false,

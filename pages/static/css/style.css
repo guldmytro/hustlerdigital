@@ -90,6 +90,82 @@ button:focus {
     outline: none;
 }
 
+#header {
+    z-index: 999;
+}
+
+.languages {
+    position: relative;
+    font-size: 16px;
+    text-transform: uppercase;
+    z-index: 222;
+}
+
+.languages .languages__current_lang {
+    padding: 0;
+    color: #fff;
+    border-radius: 4px;
+    min-width: 2.2rem;
+    text-align: center;
+    background: transparent;
+    line-height: 1.2rem;
+    height: auto;
+    text-transform: inherit;
+    font-size: inherit;
+    border: none;
+    transform: none;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.languages .languages__current_lang::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 6px;
+    border-top: 6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+.languages .languages-group {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 200ms, transform 200ms;
+}
+
+.languages .languages-group.active {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.languages .languages-group a {
+    display: block;
+    padding: 0.2rem 0;
+    font-style: normal;
+    font-size: inherit;
+    transition: background-color 200ms;
+}
+
+a.languages-group__item.selected {
+    display: none;
+}
+
+.languages .languages-group a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 @media (min-width: 1400px) {
     .container,
     .container-lg,
@@ -217,6 +293,7 @@ button:active {
     text-align: right;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .lang a {
@@ -2727,58 +2804,6 @@ button {
         color: #000000;
         padding: 15px 24px 15px;
     }
-}
-
-.wpml-ls-legacy-dropdown-click a {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    border: 0;
-    background-color: transparent;
-    padding: 5px 0px;
-    line-height: 1;
-    background: transparent;
-    border-bottom: 1px solid transparent;
-}
-
-.wpml-ls-statics-shortcode_actions {
-    background: transparent;
-}
-
-.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
-    content: "";
-    vertical-align: middle;
-    display: inline-block;
-    border: 0.25em solid transparent;
-    border-top: 0.3em solid;
-    position: absolute;
-    right: -8px;
-    top: calc(50% - 0.175em);
-}
-
-.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover > a,
-.wpml-ls-legacy-dropdown-click a:focus,
-.wpml-ls-legacy-dropdown-click a:hover {
-    color: #fff;
-    background: transparent;
-}
-
-.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-    position: relative;
-    padding-right: 10px;
-}
-
-.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
-    visibility: hidden;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    border-top: 1px solid transparent;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    z-index: 101;
 }
 
 #header .onoffcanvas-toggler {

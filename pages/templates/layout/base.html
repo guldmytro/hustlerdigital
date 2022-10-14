@@ -1,12 +1,12 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ request.LANGUAGE_CODE }}">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>{% block title %}Home{% endblock %} - Hustler</title>
-    <meta name="description" content="Hustler Digital — это идеальное combo из эффективных инструментов маркетинга, экспириенса и лидеров мнений." />
+    <title>{% block title %}{% trans "Main" %}{% endblock %} - Hustler</title>
     <link rel="stylesheet" href="{% static 'css/cms-navigation-base.css' %}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{% static 'css/cms-navigation.css' %}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="all" />
@@ -27,7 +27,7 @@
 <body>
     <div class="onoffcanvas is-fixed is-left bg-dark text-white left-aside p-1" id="left-aside">
         <div class="d-flex p-4 justify-content-end">
-            <a href="index.html"
+            <a href="{% url 'pages:home' %}"
                 ><img
                     src="{% static 'img/logo.svg' %}"
                     alt=""
@@ -45,7 +45,7 @@
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
                         aria-expanded="false"
-                        >Послуги</span
+                        >{% trans "Services" %}</span
                     ></a
                 >
             </li>
@@ -55,7 +55,7 @@
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
                         aria-expanded="false"
-                        >Кейси</span
+                        >{% trans "Cases" %}</span
                     ></a
                 >
             </li>
@@ -65,7 +65,7 @@
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
                         aria-expanded="false"
-                        >Партнери</span
+                        >{% trans "Partners" %}</span
                     ></a
                 >
             </li>
@@ -75,7 +75,7 @@
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
                         aria-expanded="false"
-                        >Блогери</span
+                        >{% trans "Bloggers" %}</span
                     ></a
                 >
             </li>
@@ -85,7 +85,7 @@
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
                         aria-expanded="false"
-                        >Контакти</span
+                        >{% trans "Contacts" %}</span
                     ></a
                 >
             </li>
@@ -95,65 +95,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-6 col-lg-6 col-xl-5 logo-top">
-                    <a href="/"
-                        ><img
-                            src="{% static 'img/Logo_hustlerdigital-11.svg' %}"
-                            alt=""
-                    /></a>
+                    <a href="{% url 'pages:home' %}">
+                        <img width="300" height="36" src="{% static 'img/Logo_hustlerdigital-11.svg' %}"/>
+                    </a>
                 </div>
                 <div class="col-1 col-md-1 col-lg-1 col-xl-6 menu-top">
                     <a href="#uslugi"
-                        >Послуги</a
+                        >{% trans "Services" %}</a
                     >
-                    <a href="#cases">Кейси</a>
+                    <a href="#cases">{% trans "Cases" %}</a>
                     <a href="#partners"
-                        >Партнери</a
+                        >{% trans "Partners" %}</a
                     >
                     <a href="#bloggers"
-                        >Блогери</a
+                        >{% trans "Bloggers" %}</a
                     >
                     <a href="#contacts"
-                        >Контакти</a
+                        >{% trans "Contacts" %}</a
                     >
                 </div>
                 <div class="col-3 col-md-2 col-lg-2 col-xl-1 lang">
-                    <div
-                        class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown-click js-wpml-ls-legacy-dropdown-click">
-                        <ul>
-                            <li
-                                class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-uk wpml-ls-current-language wpml-ls-last-item wpml-ls-item-legacy-dropdown-click">
-                                <a
-                                    href="#"
-                                    class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
-                                    <span class="wpml-ls-native"
-                                        >UA</span
-                                    ></a
-                                >
-
-                                <ul
-                                    class="js-wpml-ls-sub-menu wpml-ls-sub-menu">
-                                    <li
-                                        class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item">
-                                        <a
-                                            href="http://hustlerdigital.pro/en/"
-                                            class="wpml-ls-link">
-                                            <span class="wpml-ls-display"
-                                                >EN</span
-                                            ></a
-                                        >
-                                    </li>
-                                    <li
-                                        class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru">
-                                        <a
-                                            href="http://hustlerdigital.pro"
-                                            class="wpml-ls-link">
-                                            <span class="wpml-ls-display"
-                                                >RU</span
-                                            ></a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    <div class="languages">
+                        <button type="button" class="languages__current_lang">{{ LANGUAGE_CODE }}</button>
+                        <ul class="languages-group">
+                            {% for language in languages %}
+                                <li>
+                                    <a href="/{{ language.code }}/" class="languages-group__item{% if language.code == LANGUAGE_CODE %} selected{% endif %}">
+                                        {{ language.code }}
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <a

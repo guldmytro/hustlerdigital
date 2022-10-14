@@ -1,14 +1,15 @@
-{% load static %}
+{% load i18n %}
 
 {% if cases %}
 <div id="cases" class="case">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                <h2>Кейси</h2>
+                <h2>{% trans "Cases" %}</h2>
                 <p>
-                    Тапніть по картці,<br />щоб побачити більше
-                    інформації
+                    {% blocktrans %}
+                        Tap the card,<br>to see more information
+                    {% endblocktrans %}
                 </p>
             </div>
         </div>
@@ -36,24 +37,24 @@
                                     </picture>
                                 </div>
                                 <div class="caseb">
-                                    <div class="casebleft">Бюджет</div>
+                                    <div class="casebleft">{% trans "Budget" %}</div>
                                     <div class="casebcenter"></div>
                                     <div class="casebright">{{ case.budget }}</div>
                                 </div>
                                 <div class="caseb">
-                                    <div class="casebleft">Охоплення</div>
+                                    <div class="casebleft">{% trans "Coverage" %}</div>
                                     <div class="casebcenter"></div>
                                     <div class="casebright">{{ case.area }}</div>
                                 </div>
                                 <div class="caseb">
-                                    <div class="casebleft">Послуга</div>
+                                    <div class="casebleft">{% trans "Service" %}</div>
                                     <div class="casebcenter"></div>
                                     <div class="casebright">
                                         <span>{{ case.service }}</span>
                                     </div>
                                 </div>
                                 <div class="caseb">
-                                    <div class="casebleft">Гео</div>
+                                    <div class="casebleft">{% trans "Geo" %}</div>
                                     <div class="casebcenter"></div>
                                     <div class="casebright">{{ case.geo }}</div>
                                 </div>
