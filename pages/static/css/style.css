@@ -31,6 +31,9 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+a.active {
+    font-weight: 700 !important;
+}
 
 a,
 a:visited,
@@ -94,76 +97,38 @@ button:focus {
     z-index: 999;
 }
 
-.languages {
+.language-form {
     position: relative;
-    font-size: 16px;
-    text-transform: uppercase;
-    z-index: 222;
 }
 
-.languages .languages__current_lang {
-    padding: 0;
-    color: #fff;
-    border-radius: 4px;
-    min-width: 2.2rem;
-    text-align: center;
-    background: transparent;
-    line-height: 1.2rem;
-    height: auto;
-    text-transform: inherit;
-    font-size: inherit;
-    border: none;
-    transform: none;
-    font-style: normal;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 10px;
-}
-
-.languages .languages__current_lang::after {
+.language-form::after {
+    position: absolute;
+    top: 50%;
+    right: -4px;
     content: '';
-    display: block;
     width: 12px;
     height: 6px;
     border-top: 6px solid #fff;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-}
-
-.languages .languages-group {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    right: 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
     pointer-events: none;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 200ms, transform 200ms;
 }
 
-.languages .languages-group.active {
-    pointer-events: all;
-    opacity: 1;
-    transform: translateY(0);
+[name="language"] {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
 }
 
-.languages .languages-group a {
-    display: block;
-    padding: 0.2rem 0;
-    font-style: normal;
-    font-size: inherit;
-    transition: background-color 200ms;
-}
-
-a.languages-group__item.selected {
-    display: none;
-}
-
-.languages .languages-group a:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+[name="language"] option {
+    background-color: #000;
+    border: none;
 }
 
 @media (min-width: 1400px) {
@@ -278,8 +243,8 @@ button:active {
 }
 
 .menu-top a {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1141,7 +1106,7 @@ input {
     font-weight: 400;
     font-size: 18px;
     line-height: 133.5%;
-    color: #878787;
+    color: #222;
     padding: 18px 24px;
 }
 
@@ -1156,7 +1121,7 @@ textarea {
     font-weight: 400;
     font-size: 18px;
     line-height: 133.5%;
-    color: #878787;
+    color: #222;
     padding: 18px 24px 34px;
 }
 
@@ -2809,7 +2774,7 @@ button {
 #header .onoffcanvas-toggler {
     position: absolute;
     right: 5%;
-    top: 24px;
+    top: 30px;
 }
 
 #header.scroll .onoffcanvas-toggler {
@@ -2957,5 +2922,11 @@ form button:hover {
 @media only screen and (min-width: 769px) {
     #bgvid {
         opacity: 1;
+    }
+}
+
+@media (max-width: 575px) {
+    .logo-top img {
+        max-width: 100%;
     }
 }

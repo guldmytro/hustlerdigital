@@ -1,0 +1,15 @@
+{% load static %}
+{{ all }}
+{% if page.paginator.num_pages > 1 %}
+  <div class="pagination-wrapper">
+        <nav class="pagination">
+            {% if page.has_previous %}
+              <a href="{{ pagination_prefix }}page={{ page.previous_page_number }}" class="prev"><img src="{% static 'img/icon-arrow-left.svg' %}"></a>
+            {% endif %}
+            <span class="pagination__item">{{ page.number }}</span>
+            {% if page.has_next %}
+              <a href="{{ pagination_prefix }}page={{ page.next_page_number }}" class="next"><img src="{% static 'img/icon-arrow-left.svg' %}"></a>
+            {% endif %}
+        </nav>
+    </div>
+{% endif %}

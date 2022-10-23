@@ -1,0 +1,65 @@
+{% load i18n %}
+{% load static %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% if post %}
+<div class="news-single">
+    <div class="news-single__thumb single-thumb">
+        {% if post.popup_thumbnail %}
+            <img src="{{ post.popup_thumbnail.url }}" class="single-thumb__img">
+        {% endif %}
+        <button type="button" class="news-single__close" >
+            <img src="{% static 'img/icon-close.svg' %}" alt="{% trans 'close' %}">
+        </button>
+    </div>
+    <!-- /.single-thumb -->
+    <div class="news-single__content">
+        <aside class="news-single__aside single-author">
+            {% if post.author %}
+                {% if post.author.photo %}
+                    <div class="single-author__thumb aside-thumb">
+                        <img src="{{ post.author.photo.url }}" class="aside-thumb__img">
+                    </div>
+                {% endif %}
+                <h3 class="aside-author__name">{{ post.author.first_name|title }} {{ post.author.last_name|title }}</h3>
+                <p class="aside-author__profession">{{ post.author.profession|title }}</p>
+            {% endif %}
+        </aside>
+        <article class="news-single__text post">
+            <div class="post-header">
+                <div class="post-col">
+                    <h2 class="post-header__title">{{ post.title }}</h2>
+                    <time class="post-header__date">{{ post.created|date:'d m, Y' }}</time>
+                </div>
+                <div class="post-col">
+                    <button type="button" class="post-header__btn post-header__btn_add-to-favorite"
+                            data-id="{{ post.pk }}"
+                            data-add-like="{% url 'news:add_like' post.pk %}"
+                            data-delete-like="{% url 'news:delete_like' post.pk %}">
+                        <img src="/static/img/icon-heart.svg" alt="{% trans 'message' %}">
+                        <span class="cnt" data-likes="{{ post.likes }}">{{ post.likes }}</span>
+                        {% csrf_token %}
+                    </button>
+                </div>
+            </div>
+            <div class="post-content">
+                {{ post.content|linebreaks }}
+            </div>
+            <div class="post-comments">
+                <form action="{% url 'news:comment' post.pk %}" method="post" class="post-comments__form">
+                    {% csrf_token %}
+                    <div class="box"{%if request.user.is_authenticated %}style="display:none"{% endif %}>
+                        {{ comment_form.author_fullname }}
+                    </div>
+                    {{ comment_form.comment }}
+                    <button type="submit">{% trans 'Comment' %}</button>
+                </form>
+                {% for comment in post.comments.all %}
+                    {% include 'blog/comment.html' %}
+                {% endfor %}
+            </div>
+        </article>
+    </div>
+</div>
+{% endif %}

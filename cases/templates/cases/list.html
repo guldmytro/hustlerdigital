@@ -1,69 +1,24 @@
+{% extends 'layout/base.html' %}
 {% load i18n %}
+{% load static %}
 
-{% if cases %}
-<div id="cases" class="case">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                <h2>{% trans "Cases" %}</h2>
-                <p>
-                    {% blocktrans %}
-                        Tap the card,<br>to see more information
-                    {% endblocktrans %}
-                </p>
+{% block title %}{% trans 'Cases' %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/cases.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main id="main" class="cases">
+        <div class="container">
+            <div class="cases-slider">
+                {% for case in cases %}
+                    {% include 'cases/detail.html' with post=case %}
+                {% endfor %}
             </div>
         </div>
-    </div>
-    <div class="slider-w-flip">
-        {% for case in cases %}
-            <div class="slide-flip">
-                <div class="flip-container">
-                    <div class="hover panel">
-                        <div class="front">
-                            <div class="case-block">
-                                <h3>{{ case.title }}</h3>
-                                <div class="case-block-img">
-                                    <picture>
-                                        <img src="{{ case.img.url }}" class="webpexpress-processed" />
-                                    </picture>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="case-block">
-                                <div class="logotopflip">
-                                    <picture>
-                                        <img src="{{ case.img.url }}" class="webpexpress-processed" />
-                                    </picture>
-                                </div>
-                                <div class="caseb">
-                                    <div class="casebleft">{% trans "Budget" %}</div>
-                                    <div class="casebcenter"></div>
-                                    <div class="casebright">{{ case.budget }}</div>
-                                </div>
-                                <div class="caseb">
-                                    <div class="casebleft">{% trans "Coverage" %}</div>
-                                    <div class="casebcenter"></div>
-                                    <div class="casebright">{{ case.area }}</div>
-                                </div>
-                                <div class="caseb">
-                                    <div class="casebleft">{% trans "Service" %}</div>
-                                    <div class="casebcenter"></div>
-                                    <div class="casebright">
-                                        <span>{{ case.service }}</span>
-                                    </div>
-                                </div>
-                                <div class="caseb">
-                                    <div class="casebleft">{% trans "Geo" %}</div>
-                                    <div class="casebcenter"></div>
-                                    <div class="casebright">{{ case.geo }}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
+    </main>
+    <footer class="extra-footer">
+        {% include 'template-parts/footer.html' %}
+    </footer>
+{% endblock %}

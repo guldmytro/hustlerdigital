@@ -1,0 +1,50 @@
+{% load static %}
+{% load i18n %}
+
+<div class="slider-item-wrapper">
+    <div class="cases-slider__item cases-item {{ post.color_theme }}">
+        <div class="bg" style="background-image: url({{post.img.url}})"></div>
+        <div class="cases-item__inner">
+            <div class="cases-item__header">
+                <h2 class="cases-item__title">{{ post.title }}</h2>
+                {% if post.description %}
+                    <div class="cases-item__desc">{{ post.description }}</div>
+                {% endif %}
+            </div>
+            <div class="cases-item__stats case-stats">
+                <div class="case-stats__item stats-item">
+                    <div class="stats-item__cnt">{{ post.influencers }}</div>
+                    <div class="stats-item__label">{% trans 'Influencers' %}</div>
+                </div>
+                <div class="case-stats__item stats-item">
+                    <div class="stats-item__cnt">{{ post.views }}</div>
+                    <div class="stats-item__label">{% trans 'Views' %}</div>
+                </div>
+            </div>
+            {% if post.footer_text %}
+                <div class="cases-item__footer">
+                    {% if post.color_theme == 'yellow' %}
+                        <img src="{% static 'img/globus-yellow.svg' %}">
+                    {% elif post.color_theme == 'blue' %}
+                        <img src="{% static 'img/globus-blue.svg' %}">
+                    {% elif post.color_theme == 'mint' %}
+                        <img src="{% static 'img/globus-mint.svg' %}">
+                    {% elif post.color_theme == 'red' %}
+                        <img src="{% static 'img/globus-red.svg' %}">
+                    {% elif post.color_theme == 'ligth-blue' %}
+                        <img src="{% static 'img/globus-ligth-blue.svg' %}">
+                    {% elif post.color_theme == 'orange' %}
+                        <img src="{% static 'img/globus-orange.svg' %}">
+                    {% elif post.color_theme == 'pink' %}
+                        <img src="{% static 'img/globus-pink.svg' %}">
+                    {% elif post.color_theme == 'light' %}
+                        <img src="{% static 'img/globus-light.svg' %}">
+                    {% elif post.color_theme == 'green' %}
+                        <img src="{% static 'img/globus-green.svg' %}">
+                    {% endif %}
+                    <span>{{ post.footer_text }}</span>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

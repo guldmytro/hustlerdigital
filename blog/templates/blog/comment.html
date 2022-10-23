@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="post-comments__item post-comment">
+    <div class="post-comment__header comment-header">
+        <div class="comment-header__thumb">
+            {% if comment.author %}
+                {% if comment.author.photo %}
+                    <img src="{{ comment.author.photo.url }}">
+                {% else %}
+                    <img src="{% static 'img/icon-user.png' %}">
+                {% endif %}
+            {% else %}
+                <img src="{% static 'img/icon-user.png' %}">
+            {% endif %}
+        </div>
+        <div class="comment-header__info">
+            {% if comment.author %}
+                <h3 class="comment-header__title">{{ comment.author.first_name|title }} {{ comment.author.last_name|title }}</h3>
+            {% else %}
+                <h3 class="comment-header__title">{{ comment.author_fullname|title }}</h3>
+            {% endif %}
+            <time class="comment-header__time">{{ comment.created|date:'d m, Y' }}</time>
+        </div>
+    </div>
+    <div class="post-comment__text">
+        {{ comment.comment|linebreaks }}
+    </div>
+</div>

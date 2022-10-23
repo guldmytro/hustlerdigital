@@ -1,0 +1,127 @@
+{% extends 'layout/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans 'Bloggers' %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/bloggers.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main class="bloggers" id="main">
+        <div class="container">
+            <form class="bloggers-form">
+                <fieldset class="bloggers-form_fieldset">
+                    {{ search_form.search }}
+                </fieldset>
+                <fieldset class="bloggers-form_fieldset">
+                    {% for radio in search_form.type %}
+                        <label class="bloggers-form__radio-wrapper">
+                            {{ radio.tag }}
+                            <span class="pseudo-radio">
+                                {% if forloop.counter0 == 0 %}
+                                    <img src="{% static 'img/logo-youtube.png' %}" width="122" height="30">
+                                {% elif forloop.counter0 == 1 %}
+                                    <img src="{% static 'img/logo-instagram.png' %}" width="122" height="30">
+                                {% else %}
+                                    <img src="{% static 'img/logo-twich.png' %}" width="122" height="30">
+                                {% endif %}
+                            </span>
+                        </label>
+                    {% endfor %}
+                </fieldset>
+                {% if tags %}
+                    <fieldset class="bloggers-form_fieldset">
+                        {% for field in tags_form.tag %}
+                            <label class="bloggers-form__checkbox-wrapper">
+                                {{ field.tag }}
+                                <span class="pseudo-checkbox">
+                                    <span>{{ field.choice_label }}</span>
+                                </span>
+                            </label>
+                        {% endfor %}
+                    </fieldset>
+                {% endif %}
+                <fieldset class="bloggers-form_fieldset">
+                    <input type="submit" value="{% trans 'Search' %}">
+                </fieldset>
+            </form>
+            <div class="bloggers-result">
+                {% if posts %}
+                <table class="bloggers-result__table bloggers-result__table_youtube">
+                    <tbody>
+                        <tr>
+                            {% if post_type == 'youtube' %}
+                                <th></th>
+                                <th>{% trans 'Influencer' %}</th>
+                                <th>{% trans 'Link' %}</th>
+                                <th>{% trans 'Subscribers' %}</th>
+                                <th>{% trans 'Views' %}</th>
+                                <th>{% trans 'Last video' %}</th>
+                            {% elif post_type == 'twich' %}
+                                <th></th>
+                                <th>{% trans 'Influencer' %}</th>
+                                <th>{% trans 'Link' %}</th>
+                                <th>{% trans 'Subscribers' %}</th>
+                                <th>{% trans 'Avarage online' %}</th>
+                                <th>{% trans 'Last stream' %}</th>
+                            {% else %}
+                                <th></th>
+                                <th>{% trans 'Influencer' %}</th>
+                                <th>{% trans 'Link' %}</th>
+                                <th>{% trans 'Subscribers' %}</th>
+                                <th>{% trans 'Involvement' %}</th>
+                            {% endif %}
+                        </tr>
+                        {% for post in posts %}
+                            <tr>
+                                {% if post_type == 'youtube' %}
+                                    <td>{% if post.thumb_url %}
+                                            <img src="{{ post.thumb_url }}" crossorigin="anonymous">
+                                        {% endif %}
+                                    </td>
+                                    <td data-title="{% trans 'Influencer' %}"><span>{{ post.title }}</span></td>
+                                    <td data-title="{% trans 'Link' %}"><a href="{{ post.youtube_url }}" target="_blank"><img src="{% static 'img/logo-youtube_short.png' %}"></a></td>
+                                    <td data-title="{% trans 'Subscribers' %}">{{ post.subscribers }}</td>
+                                    <td data-title="{% trans 'Views' %}">{{ post.views }}</td>
+                                    <td data-title="{% trans 'Last video' %}">{{ post.last_video }}</td>
+                                {% elif post_type == 'twich' %}
+                                    <td>{% if post.thumb_url %}
+                                            <img src="{{ post.thumb_url }}" crossorigin="anonymous">
+                                        {% endif %}
+                                    </td>
+                                    <td data-title="{% trans 'Influencer' %}"><span>{{ post.title }}</span></td>
+                                    <td data-title="{% trans 'Link' %}"><a href="{{ post.youtube_url }}" target="_blank"><img src="{% static 'img/icon-twich.png' %}"></a></td>
+                                    <td data-title="{% trans 'Subscribers' %}">{{ post.subscribers }}</td>
+                                    <td data-title="{% trans 'Avarage online' %}">{{ post.average_online }}</td>
+                                    <td data-title="{% trans 'Last stream' %}">{{ post.last_stream }}</td>
+                                {% else %}
+                                    <td>{% if post.thumb %}
+                                            <img src="{{ post.thumb.url }}" class="table-thumb" crossorigin="anonymous">
+                                        {% endif %}
+                                    </td>
+                                    <td data-title="{% trans 'Influencer' %}"><span>{{ post.title }}</span></td>
+                                    <td data-title="{% trans 'Link' %}"><a href="{{ post.youtube_url }}" target="_blank"><img src="{% static 'img/logo-inst.png' %}"></a></td>
+                                    <td data-title="{% trans 'Subscribers' %}">{{ post.subscribers }}</td>
+                                    <td data-title="{% trans 'Involvement' %}">{{ post.involvement }}</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% include 'bloggers/pagination.html' with page=posts %}
+                {% else %}
+                    <h2 class="empty">{% trans 'Bloggers not found' %}</h2>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+    <footer class="extra-footer">
+        {% include 'template-parts/footer.html' %}
+    </footer>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/index.js' %}"></script>
+{% endblock %}

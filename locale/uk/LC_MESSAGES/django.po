@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-14 15:36+0000\n"
-"PO-Revision-Date: 2022-10-14 15:37+0000\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2022-10-21 16:20+0000\n"
+"PO-Revision-Date: 2022-10-21 16:20+0000\n"
+"Last-Translator: John Doe <some@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,14 +19,209 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: cases/apps.py:8 cases/models.py:21 cases/templates/cases/list.html:8
-#: pages/templates/layout/base.html:58 pages/templates/layout/base.html:106
-msgid "Cases"
-msgstr "Кейси"
+#: blog/apps.py:8 blog/models.py:44 blog/templates/blog/list.html:7
+#: blog/templates/blog/list.html:19 pages/templates/layout/base.html:86
+#: pages/templates/layout/base.html:121
+msgid "News"
+msgstr "Новини"
 
-#: cases/models.py:8 partners/models.py:8
+#: blog/forms.py:11 bloggers/models.py:6 pages/forms.py:9
+msgid "Name"
+msgstr "Ім'я"
+
+#: blog/forms.py:17 pages/forms.py:29
+msgid "Message"
+msgstr "Повідомлення"
+
+#: blog/models.py:8
+msgid "Avatar"
+msgstr "Аватар"
+
+#: blog/models.py:9
+msgid "Profession"
+msgstr "Професія"
+
+#: blog/models.py:18
+msgid "Title EN"
+msgstr "Заголовок EN"
+
+#: blog/models.py:19
+msgid "Title RU"
+msgstr "Заголовок RU"
+
+#: blog/models.py:20
+msgid "Title UA"
+msgstr "Заголовок UA"
+
+#: blog/models.py:21
+msgid "Short Excerpt EN"
+msgstr "Короткий опис EN"
+
+#: blog/models.py:22
+msgid "Short Excerpt RU"
+msgstr "Короткий опис RU"
+
+#: blog/models.py:23
+msgid "Short Excerpt UA"
+msgstr "Короткий опис UA"
+
+#: blog/models.py:24
+msgid "Content EN"
+msgstr "Контент EN"
+
+#: blog/models.py:25
+msgid "Content RU"
+msgstr "Контент RU"
+
+#: blog/models.py:26
+msgid "Content UA"
+msgstr "Контент UA"
+
+#: blog/models.py:28
+msgid "Card Thumbnail"
+msgstr "Мініатюра картки"
+
+#: blog/models.py:29
+msgid ""
+"Picture must be in                                                    png "
+"format with transparent                                                   "
+"background"
+msgstr "Зображення повинно бути в png форматі із прозорим фоном"
+
+#: blog/models.py:33
+msgid "Banner Thumbnail"
+msgstr "Зображення на банері"
+
+#: blog/models.py:35
+msgid "Popup Thumbnail"
+msgstr "Зображення у попапі"
+
+#: blog/models.py:37 blog/models.py:61 cases/models.py:16
+#: partners/models.py:13
+msgid "Created"
+msgstr "Створено"
+
+#: blog/models.py:38
+msgid "Likes"
+msgstr "Лайки"
+
+#: blog/models.py:43
+msgid "New"
+msgstr "Новина"
+
+#: blog/models.py:52 blog/models.py:54
+msgid "Author"
+msgstr "Автор"
+
+#: blog/models.py:58
+msgid "Post"
+msgstr "Стаття"
+
+#: blog/models.py:59 blog/models.py:65 blog/templates/blog/detail.html:68
+msgid "Comment"
+msgstr "Коментувати"
+
+#: blog/models.py:66
+msgid "Comments"
+msgstr "Коментарі"
+
+#: blog/templates/blog/detail.html:13
+msgid "close"
+msgstr "закрити"
+
+#: blog/templates/blog/detail.html:46
+msgid "message"
+msgstr "повідомлення"
+
+#: blog/templates/blog/list.html:46
+msgid "Read also"
+msgstr "Читайте також"
+
+#: blog/templates/blog/list.html:66
+msgid "Read more"
+msgstr "Читати більше"
+
+#: blog/templates/blog/list.html:67
+msgid "arrow"
+msgstr "стрілка"
+
+#: bloggers/apps.py:8 bloggers/templates/bloggers/list.html:5
+#: pages/templates/layout/base.html:80 pages/templates/layout/base.html:118
+#: pages/templates/pages/home.html:418
+msgid "Bloggers"
+msgstr "Блогери"
+
+#: bloggers/models.py:7
+msgid "Slug"
+msgstr "Слаг"
+
+#: bloggers/models.py:10
+msgid "Tag"
+msgstr "Тег"
+
+#: bloggers/models.py:11 bloggers/models.py:18
+msgid "Tags"
+msgstr "Теги"
+
+#: bloggers/models.py:19
+msgid "Youtube Link"
+msgstr "Посилання Ютюб"
+
+#: bloggers/models.py:20 cases/models.py:8 partners/models.py:8
 msgid "Title"
 msgstr "Заголовок"
+
+#: bloggers/models.py:22
+msgid "Logo link"
+msgstr "Посилання логотипа"
+
+#: bloggers/models.py:24 bloggers/templates/bloggers/list.html:70
+#: bloggers/templates/bloggers/list.html:82
+msgid "Subscribers"
+msgstr "Підписники"
+
+#: bloggers/models.py:26 bloggers/templates/bloggers/list.html:71
+#: bloggers/templates/bloggers/list.html:83
+msgid "Views"
+msgstr "Перегляди"
+
+#: bloggers/models.py:28 bloggers/templates/bloggers/list.html:72
+#: bloggers/templates/bloggers/list.html:84
+msgid "Last video"
+msgstr "Останнє відео"
+
+#: bloggers/models.py:32
+msgid "Youtuber"
+msgstr "Ютюбер"
+
+#: bloggers/models.py:33
+msgid "Youtubers"
+msgstr "Ютюбери"
+
+#: bloggers/templates/bloggers/list.html:59
+msgid "Search"
+msgstr "Пошук"
+
+#: bloggers/templates/bloggers/list.html:68
+#: bloggers/templates/bloggers/list.html:80
+msgid "Influencer"
+msgstr "Iнфлюенсер"
+
+#: bloggers/templates/bloggers/list.html:69
+#: bloggers/templates/bloggers/list.html:81 partners/models.py:11
+msgid "Link"
+msgstr "Зсилка"
+
+#: bloggers/templates/bloggers/list.html:91
+#, fuzzy
+#| msgid "Bloggers"
+msgid "Bloggers not found"
+msgstr "Блогери"
+
+#: cases/apps.py:8 cases/models.py:21 cases/templates/cases/list.html:8
+#: pages/templates/layout/base.html:60 pages/templates/layout/base.html:113
+msgid "Cases"
+msgstr "Кейси"
 
 #: cases/models.py:10 cases/models.py:26 partners/models.py:10
 #: partners/models.py:23
@@ -50,10 +245,6 @@ msgstr "Послуга"
 msgid "Geo"
 msgstr "Гео"
 
-#: cases/models.py:16 partners/models.py:13
-msgid "Created"
-msgstr "Створено"
-
 #: cases/models.py:20
 msgid "Case"
 msgstr "Кейс"
@@ -67,21 +258,17 @@ msgstr ""
 "\n"
 "Тапніть по картці,<br>щоб побачити більше інформації"
 
-#: hustler/settings.py:125
+#: hustler/settings.py:129
 msgid "English"
 msgstr "Англійська"
 
-#: hustler/settings.py:126
+#: hustler/settings.py:130
 msgid "Russian"
 msgstr "Російська"
 
-#: hustler/settings.py:127
+#: hustler/settings.py:131
 msgid "Ukrainian"
 msgstr "Українська"
-
-#: pages/forms.py:9
-msgid "Name"
-msgstr "Ім'я"
 
 #: pages/forms.py:14
 msgid "E-mail"
@@ -95,30 +282,21 @@ msgstr "Посилання на проєкт"
 msgid "Advertising budget"
 msgstr "Рекламний бюджет"
 
-#: pages/forms.py:29
-msgid "Message"
-msgstr "Повідомлення"
-
 #: pages/templates/layout/base.html:9
 msgid "Main"
 msgstr "Головна"
 
-#: pages/templates/layout/base.html:48 pages/templates/layout/base.html:104
+#: pages/templates/layout/base.html:50 pages/templates/layout/base.html:111
 msgid "Services"
 msgstr "Сервіси"
 
-#: pages/templates/layout/base.html:68 pages/templates/layout/base.html:108
+#: pages/templates/layout/base.html:70 pages/templates/layout/base.html:115
 #: partners/apps.py:8 partners/models.py:18
 #: partners/templates/partners/list.html:8
 msgid "Partners"
 msgstr "Партнери"
 
-#: pages/templates/layout/base.html:78 pages/templates/layout/base.html:111
-#: pages/templates/pages/home.html:418
-msgid "Bloggers"
-msgstr "Блогери"
-
-#: pages/templates/layout/base.html:88 pages/templates/layout/base.html:114
+#: pages/templates/layout/base.html:95 pages/templates/layout/base.html:124
 #: pages/templates/pages/home.html:676
 msgid "Contacts"
 msgstr "Контакти"
@@ -442,13 +620,9 @@ msgstr "Помилка"
 msgid "Send"
 msgstr "Відправити"
 
-#: pages/templates/pages/home.html:747
+#: pages/templates/template-parts/footer.html:47
 msgid "Privacy Policy"
 msgstr "Політика конфіденційності"
-
-#: partners/models.py:11
-msgid "Link"
-msgstr "Зсилка"
 
 #: partners/models.py:17
 msgid "Partner"

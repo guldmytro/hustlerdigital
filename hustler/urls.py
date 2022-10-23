@@ -21,8 +21,15 @@ from django.contrib.staticfiles.views import serve
 from django.views.decorators.cache import never_cache
 from django.conf.urls.i18n import i18n_patterns
 
-urlpatterns = i18n_patterns(
-    path('admin/', admin.site.urls),
+urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
+]
+
+urlpatterns += i18n_patterns(
+    path('bloggers/', include('bloggers.urls')),
+    path('news/', include('blog.urls')),
+    path('cases/', include('cases.urls')),
+    path('admin/', admin.site.urls),  
     path('rosetta/', include('rosetta.urls')),
     path('', include('pages.urls')),
 )

@@ -1,0 +1,80 @@
+{% extends 'layout/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}{% trans 'News' %}{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="main" class="news-wrapper">
+    <main class="news">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-header__title section-header__title_primary">
+                    {% trans 'News' %}
+                </h1>
+            </div>
+            {% if latest_posts %}
+                <div class="news-slider">
+                    {% for post in latest_posts %}
+                        <div class="news-slider__item news-slide" data-url="{% url 'news:detail' post.pk %}">
+                            <h2 class="news-slide__title">{{ post.title }}</h2>
+                            {% if post.banner_thumbnail %}
+                                <img class="news-slide__img" src="{{ post.banner_thumbnail.url }}">
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </main>
+    {% if other_posts %}
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-header__title section-header__title_secondary">{% trans 'Read also' %}</h2>
+                </div>
+                <ul class="news-group">
+                    {% for post in other_posts %}
+                        <li class="news-group__item news-item">
+                            {% if post.card_thumbnail %}
+                                <img src="{{ post.card_thumbnail.url }}" style="shape-outside: url({{ post.card_thumbnail.url }})" class="news-item__img">
+                            {% endif %}
+                            <div class="news-item__inner">
+                                {% if LANGUAGE_CODE == 'en' %}
+                                    <h3 class="news-item__title">{{ post.title_en }}</h3>
+                                    <p class="news-item__excerpt">{{ post.excerpt_en|truncatechars:90 }}</p>
+                                {% elif LANGUAGE_CODE == 'ru'  %}
+                                    <h3 class="news-item__title">{{ post.title_ru }}</h3>
+                                    <p class="news-item__excerpt">{{ post.excerpt_ru|truncatechars:90 }}</p>
+                                {% elif LANGUAGE_CODE == 'uk'  %}
+                                    <h3 class="news-item__title">{{ post.title_ua }}</h3>
+                                    <p class="news-item__excerpt">{{ post.excerpt_ua|truncatechars:90 }}</p>
+                                {% endif %}
+                                <button type="button" class="news-item__btn" data-url="{% url 'news:detail' post.pk %}">
+                                    <span>{% trans 'Read more' %}</span>
+                                    <img src="{% static 'img/icon-arrow.svg' %}" alt="{% trans 'arrow' %}">
+                                </button>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    {% csrf_token %}
+    {% endif %}
+    <footer class="footer">
+        {% include 'template-parts/footer.html' %}
+    </footer>
+    <div class="news-popup">
+        <div class="container news-popup-inner">
+        </div>
+    </div>
+</div>
+<!-- /.news-wrapper -->
+{% endblock %}

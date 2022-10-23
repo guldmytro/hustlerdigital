@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>{% block title %}{% trans "Main" %}{% endblock %} - Hustler</title>
+    <link rel="stylesheet" href="{% static 'css/vars.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/cms-navigation-base.css' %}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{% static 'css/cms-navigation.css' %}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="all" />
@@ -15,9 +16,9 @@
     <link rel="stylesheet" href="{% static 'css/metismenujs.css' %}" type="text/css" media="all" />
     <link rel="stylesheet" href="{% static 'css/onoffcanvas.min.css' %}" type="text/css" media="all" />
     <link rel="stylesheet" href="{% static 'css/mm-onoffcanvas.css' %}" type="text/css" media="all" />
-    <link rel="stylesheet" href="{% static './css/lightbox.min.css' %}" type="text/css" media="all" />
     <link rel="stylesheet" href="{% static 'css/anims.css' %}" type="text/css" media="all" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    {% block styles %}{% endblock %}
     <script src="{% static 'js/script.min.js' %}"></script>
     <link rel="icon" href="{% static 'img/cropped-favicon-1-32x32.png' %}" sizes="32x32' %}" />
     <link rel="icon" href="{% static 'img/cropped-favicon-1-192x192.png' %}" sizes="192x192' %}" />
@@ -40,7 +41,7 @@
         </div>
         <ul class="metismenu left-menu" id="menu2">
             <li>
-                <a href="#uslugi"
+                <a href="{% url 'pages:home' %}#uslugi"
                     ><span
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
@@ -50,7 +51,7 @@
                 >
             </li>
             <li>
-                <a href="#cases"
+                <a href="{% url 'cases:list' %}"{% if section == 'cases' %} class="active"{% endif %}
                     ><span
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
@@ -60,7 +61,7 @@
                 >
             </li>
             <li>
-                <a href="#partners"
+                <a href="{% url 'pages:home' %}#partners"
                     ><span
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
@@ -70,7 +71,7 @@
                 >
             </li>
             <li>
-                <a href="#bloggers"
+                <a href="{% url 'bloggers:list' %}"{% if section == 'bloggers' %} class="active"{% endif %}
                     ><span
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
@@ -80,7 +81,12 @@
                 >
             </li>
             <li>
-                <a href="#contacts"
+                <a href="{% url 'news:list' %}"{% if section == 'blog' %} class="active"{% endif %}>
+                    <span>{% trans "News" %}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'pages:home' %}#contacts"
                     ><span
                         data-target="#left-aside"
                         data-toggle="onoffcanvas"
@@ -100,36 +106,27 @@
                     </a>
                 </div>
                 <div class="col-1 col-md-1 col-lg-1 col-xl-6 menu-top">
-                    <a href="#uslugi"
-                        >{% trans "Services" %}</a
-                    >
-                    <a href="#cases">{% trans "Cases" %}</a>
-                    <a href="#partners"
-                        >{% trans "Partners" %}</a
-                    >
-                    <a href="#bloggers"
-                        >{% trans "Bloggers" %}</a
-                    >
-                    <a href="#contacts"
-                        >{% trans "Contacts" %}</a
-                    >
+                    <a href="{% url 'pages:home' %}#uslugi">{% trans "Services" %}</a>
+                    <a href="{% url 'cases:list' %}"{% if section == 'cases' %} class="active"{% endif %}>{% trans "Cases" %}</a>
+                    <a href="{% url 'pages:home' %}#partners">{% trans "Partners" %}</a>
+                    <a href="{% url 'bloggers:list' %}"{% if section == 'bloggers' %} class="active"{% endif %}>{% trans "Bloggers" %}</a>
+                    <a href="{% url 'news:list' %}"{% if section == 'blog' %} class="active"{% endif %}>{% trans "News" %}</a>
+                    <a href="{% url 'pages:home' %}#contacts">{% trans "Contacts" %}</a>
                 </div>
                 <div class="col-3 col-md-2 col-lg-2 col-xl-1 lang">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
-                    <div class="languages">
-                        <button type="button" class="languages__current_lang">{{ LANGUAGE_CODE }}</button>
-                        <ul class="languages-group">
+                    <form action="{% url 'set_language' %}" method="post" class="language-form">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
                             {% for language in languages %}
-                                <li>
-                                    <a href="/{{ language.code }}/" class="languages-group__item{% if language.code == LANGUAGE_CODE %} selected{% endif %}">
-                                        {{ language.code }}
-                                    </a>
-                                </li>
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                    {{ language.code }}
+                                </option>
                             {% endfor %}
-                        </ul>
-                    </div>
+                        </select>
+                    </form>
                     <a
                         href="#left-aside"
                         class="toggle-nav onoffcanvas-toggler is-animated navbg"
@@ -140,6 +137,153 @@
         </div>
     </div>
     {% block content %}{% endblock %}
+    <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/metismenujs.js' %}"></script>
+    <script src="{% static 'js/onoffcanvas.js' %}"></script>
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/mm-onoffcanvas.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollmagic.min.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script>
+        $(".slider-w-flip").slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        dots: true,
+                        arrows: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false
+                    }
+                }
+            ]
+        });
+
+        $(".slider-blogs").slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        dots: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        dots: false,
+                        arrows: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false
+                    }
+                }
+            ]
+        });
+    </script>
+
+    <script>
+        $(document).on("scroll", window, function () {
+            var element = document.getElementById("header");
+            if ($(window).scrollTop() > 250) {
+                element.classList.add("scroll");
+            } else {
+                element.classList.remove("scroll");
+            }
+        });
+    </script>
+
+    <script>
+        window.counter = function () {
+            var span = this.querySelector("span");
+            var current = parseInt(span.textContent);
+
+            span.textContent = current + 1;
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            ScrollTrigger.init();
+        });
+    </script>
+
+    <script>
+        $(".flip-container").click(function () {
+            $(".flip-container").toggleClass("active");
+        });
+
+        function countTo(number, selector, before, after) {
+            if (!selector) return;
+
+            let from = 0;
+            let to = number;
+            let step = 1;
+            let duration = 5;
+            let interval = (duration / number) * 1000;
+
+            if (from == to) {
+                document.querySelector(selector).textContent =
+                    before + from + after;
+                return;
+            }
+            if (document.querySelector(selector)) {
+                let counter = setInterval(function () {
+                    from += step;
+                    
+                    document.querySelector(selector).textContent = before + from + after;
+    
+                    if (from == to) {
+                        clearInterval(counter);
+                    }
+                }, interval);        
+            }
+        }
+        countTo(10, ".num1", "", "+");
+        countTo(28, ".num2", "", "");
+        countTo(100, ".num3", ">", "M");
+        countTo(120, ".num4", "", "+");
+    </script>
     {% block scripts %}{% endblock %}
 </body>
 </html>

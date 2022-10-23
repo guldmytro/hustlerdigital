@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-14 15:36+0000\n"
+"POT-Creation-Date: 2022-10-21 16:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,205 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: cases/apps.py:8 cases/models.py:21 cases/templates/cases/list.html:8
-#: pages/templates/layout/base.html:58 pages/templates/layout/base.html:106
-msgid "Cases"
+#: blog/apps.py:8 blog/models.py:44 blog/templates/blog/list.html:7
+#: blog/templates/blog/list.html:19 pages/templates/layout/base.html:86
+#: pages/templates/layout/base.html:121
+msgid "News"
 msgstr ""
 
-#: cases/models.py:8 partners/models.py:8
+#: blog/forms.py:11 bloggers/models.py:6 pages/forms.py:9
+msgid "Name"
+msgstr ""
+
+#: blog/forms.py:17 pages/forms.py:29
+msgid "Message"
+msgstr ""
+
+#: blog/models.py:8
+msgid "Avatar"
+msgstr ""
+
+#: blog/models.py:9
+msgid "Profession"
+msgstr ""
+
+#: blog/models.py:18
+msgid "Title EN"
+msgstr ""
+
+#: blog/models.py:19
+msgid "Title RU"
+msgstr ""
+
+#: blog/models.py:20
+msgid "Title UA"
+msgstr ""
+
+#: blog/models.py:21
+msgid "Short Excerpt EN"
+msgstr ""
+
+#: blog/models.py:22
+msgid "Short Excerpt RU"
+msgstr ""
+
+#: blog/models.py:23
+msgid "Short Excerpt UA"
+msgstr ""
+
+#: blog/models.py:24
+msgid "Content EN"
+msgstr ""
+
+#: blog/models.py:25
+msgid "Content RU"
+msgstr ""
+
+#: blog/models.py:26
+msgid "Content UA"
+msgstr ""
+
+#: blog/models.py:28
+msgid "Card Thumbnail"
+msgstr ""
+
+#: blog/models.py:29
+msgid ""
+"Picture must be in                                                    png "
+"format with transparent                                                   "
+"background"
+msgstr ""
+
+#: blog/models.py:33
+msgid "Banner Thumbnail"
+msgstr ""
+
+#: blog/models.py:35
+msgid "Popup Thumbnail"
+msgstr ""
+
+#: blog/models.py:37 blog/models.py:61 cases/models.py:16 partners/models.py:13
+msgid "Created"
+msgstr ""
+
+#: blog/models.py:38
+msgid "Likes"
+msgstr ""
+
+#: blog/models.py:43
+msgid "New"
+msgstr ""
+
+#: blog/models.py:52 blog/models.py:54
+msgid "Author"
+msgstr ""
+
+#: blog/models.py:58
+msgid "Post"
+msgstr ""
+
+#: blog/models.py:59 blog/models.py:65 blog/templates/blog/detail.html:68
+msgid "Comment"
+msgstr ""
+
+#: blog/models.py:66
+msgid "Comments"
+msgstr ""
+
+#: blog/templates/blog/detail.html:13
+msgid "close"
+msgstr ""
+
+#: blog/templates/blog/detail.html:46
+msgid "message"
+msgstr ""
+
+#: blog/templates/blog/list.html:46
+msgid "Read also"
+msgstr ""
+
+#: blog/templates/blog/list.html:66
+msgid "Read more"
+msgstr ""
+
+#: blog/templates/blog/list.html:67
+msgid "arrow"
+msgstr ""
+
+#: bloggers/apps.py:8 bloggers/templates/bloggers/list.html:5
+#: pages/templates/layout/base.html:80 pages/templates/layout/base.html:118
+#: pages/templates/pages/home.html:418
+msgid "Bloggers"
+msgstr ""
+
+#: bloggers/models.py:7
+msgid "Slug"
+msgstr ""
+
+#: bloggers/models.py:10
+msgid "Tag"
+msgstr ""
+
+#: bloggers/models.py:11 bloggers/models.py:18
+msgid "Tags"
+msgstr ""
+
+#: bloggers/models.py:19
+msgid "Youtube Link"
+msgstr ""
+
+#: bloggers/models.py:20 cases/models.py:8 partners/models.py:8
 msgid "Title"
+msgstr ""
+
+#: bloggers/models.py:22
+msgid "Logo link"
+msgstr ""
+
+#: bloggers/models.py:24 bloggers/templates/bloggers/list.html:70
+#: bloggers/templates/bloggers/list.html:82
+msgid "Subscribers"
+msgstr ""
+
+#: bloggers/models.py:26 bloggers/templates/bloggers/list.html:71
+#: bloggers/templates/bloggers/list.html:83
+msgid "Views"
+msgstr ""
+
+#: bloggers/models.py:28 bloggers/templates/bloggers/list.html:72
+#: bloggers/templates/bloggers/list.html:84
+msgid "Last video"
+msgstr ""
+
+#: bloggers/models.py:32
+msgid "Youtuber"
+msgstr ""
+
+#: bloggers/models.py:33
+msgid "Youtubers"
+msgstr ""
+
+#: bloggers/templates/bloggers/list.html:59
+msgid "Search"
+msgstr ""
+
+#: bloggers/templates/bloggers/list.html:68
+#: bloggers/templates/bloggers/list.html:80
+msgid "Influencer"
+msgstr ""
+
+#: bloggers/templates/bloggers/list.html:69
+#: bloggers/templates/bloggers/list.html:81 partners/models.py:11
+msgid "Link"
+msgstr ""
+
+#: bloggers/templates/bloggers/list.html:91
+msgid "Bloggers not found"
+msgstr ""
+
+#: cases/apps.py:8 cases/models.py:21 cases/templates/cases/list.html:8
+#: pages/templates/layout/base.html:60 pages/templates/layout/base.html:113
+msgid "Cases"
 msgstr ""
 
 #: cases/models.py:10 cases/models.py:26 partners/models.py:10
@@ -49,10 +241,6 @@ msgstr ""
 msgid "Geo"
 msgstr ""
 
-#: cases/models.py:16 partners/models.py:13
-msgid "Created"
-msgstr ""
-
 #: cases/models.py:20
 msgid "Case"
 msgstr ""
@@ -64,20 +252,16 @@ msgid ""
 "                    "
 msgstr ""
 
-#: hustler/settings.py:125
+#: hustler/settings.py:129
 msgid "English"
 msgstr ""
 
-#: hustler/settings.py:126
+#: hustler/settings.py:130
 msgid "Russian"
 msgstr ""
 
-#: hustler/settings.py:127
+#: hustler/settings.py:131
 msgid "Ukrainian"
-msgstr ""
-
-#: pages/forms.py:9
-msgid "Name"
 msgstr ""
 
 #: pages/forms.py:14
@@ -92,30 +276,21 @@ msgstr ""
 msgid "Advertising budget"
 msgstr ""
 
-#: pages/forms.py:29
-msgid "Message"
-msgstr ""
-
 #: pages/templates/layout/base.html:9
 msgid "Main"
 msgstr ""
 
-#: pages/templates/layout/base.html:48 pages/templates/layout/base.html:104
+#: pages/templates/layout/base.html:50 pages/templates/layout/base.html:111
 msgid "Services"
 msgstr ""
 
-#: pages/templates/layout/base.html:68 pages/templates/layout/base.html:108
+#: pages/templates/layout/base.html:70 pages/templates/layout/base.html:115
 #: partners/apps.py:8 partners/models.py:18
 #: partners/templates/partners/list.html:8
 msgid "Partners"
 msgstr ""
 
-#: pages/templates/layout/base.html:78 pages/templates/layout/base.html:111
-#: pages/templates/pages/home.html:418
-msgid "Bloggers"
-msgstr ""
-
-#: pages/templates/layout/base.html:88 pages/templates/layout/base.html:114
+#: pages/templates/layout/base.html:95 pages/templates/layout/base.html:124
 #: pages/templates/pages/home.html:676
 msgid "Contacts"
 msgstr ""
@@ -409,12 +584,8 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: pages/templates/pages/home.html:747
+#: pages/templates/template-parts/footer.html:47
 msgid "Privacy Policy"
-msgstr ""
-
-#: partners/models.py:11
-msgid "Link"
 msgstr ""
 
 #: partners/models.py:17

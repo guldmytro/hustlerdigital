@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'cases.apps.CasesConfig',
     'partners.apps.PartnersConfig',
+    'bloggers.apps.BloggersConfig',
+    'blog.apps.BlogConfig',
     # 3d party
     'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bloggers.context_processors.bloggers_context_processor',
             ],
         },
     },
@@ -83,8 +87,8 @@ WSGI_APPLICATION = 'hustler.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hustler_dev',
-        'USER': 'hustler_admin',
+        'NAME': 'btre_prod',
+        'USER': 'dbadmin',
         'PASSWORD': 'abc123!',
         'HOST': 'localhost'
     }
@@ -119,6 +123,8 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 LANGUAGES = (
@@ -130,6 +136,18 @@ LANGUAGES = (
 LOCALE_PATHS = (
     Path(BASE_DIR, 'locale/'),
 )
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'ru'},
+        {'code': 'uk'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
 
 
 # Static files (CSS, JavaScript, Images)
@@ -145,6 +163,8 @@ MEDIA_ROOT = Path('media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'blog.AdvUser'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 SESSION_COOKIE_HTTPONLY = True
