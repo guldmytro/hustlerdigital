@@ -21,11 +21,11 @@ class Case(TranslatableModel):
                                    choices=COLOR_CHOICES, default='yellow',
                                    max_length=20)
     translations = TranslatedFields(
-        title = models.CharField(max_length=30, verbose_name=_('Title')),
-        description = models.TextField(max_length=200, verbose_name=_('Description'),
-                                   blank=True, null=True),
-        footer_text = models.TextField(verbose_name=_('Footer text'), blank=True,
-                                   null=True, max_length=200)
+        title=models.CharField(max_length=30, verbose_name=_('Title')),
+        description=models.TextField(max_length=200, verbose_name=_('Description'),
+                                     blank=True, null=True),
+        footer_text=models.TextField(verbose_name=_('Footer text'), blank=True,
+                                     null=True, max_length=200)
     )
     img = models.ImageField(upload_to='images/%Y/%m/%d/',
                             verbose_name=_('Image'))

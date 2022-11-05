@@ -6,8 +6,8 @@ from .forms import CommentForm
 
 
 def blog_list(request):
-    latest_posts = Post.objects.defer('content_ru', 'content_en', 'content_ua').all()[:4]
-    other_posts = Post.objects.defer('content_ru', 'content_en', 'content_ua').all()[4:8]
+    latest_posts = Post.objects.all()[:4]
+    other_posts = Post.objects.all()[4:8]
     return render(request, 'blog/list.html', {
         'latest_posts': latest_posts,
         'other_posts': other_posts,

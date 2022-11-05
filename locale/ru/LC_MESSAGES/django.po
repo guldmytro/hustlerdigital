@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-21 16:20+0000\n"
-"PO-Revision-Date: 2022-10-21 16:20+0000\n"
+"POT-Creation-Date: 2022-10-23 15:24+0000\n"
+"PO-Revision-Date: 2022-10-23 15:28+0000\n"
 "Last-Translator: John Doe <some@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,9 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: blog/apps.py:8 blog/models.py:44 blog/templates/blog/list.html:7
-#: blog/templates/blog/list.html:19 pages/templates/layout/base.html:86
-#: pages/templates/layout/base.html:121
+#: blog/apps.py:8 blog/models.py:41 blog/templates/blog/list.html:7
+#: blog/templates/blog/list.html:19 pages/templates/layout/base.html:85
+#: pages/templates/layout/base.html:113
 msgid "News"
 msgstr "Новости"
 
@@ -33,95 +33,74 @@ msgstr "Имя"
 msgid "Message"
 msgstr "Сообщение"
 
-#: blog/models.py:8
+#: blog/models.py:9
 msgid "Avatar"
 msgstr "Аватар"
 
-#: blog/models.py:9
+#: blog/models.py:10
 msgid "Profession"
 msgstr "Профессия"
 
-#: blog/models.py:18
-msgid "Title EN"
-msgstr "Заголовок EN"
-
-#: blog/models.py:19
-msgid "Title RU"
-msgstr "Заголовок RU"
-
-#: blog/models.py:20
-msgid "Title UA"
-msgstr "Заголовок UA"
+#: blog/models.py:20 bloggers/models.py:20 bloggers/models.py:44
+#: bloggers/models.py:67 cases/models.py:24 partners/models.py:8
+msgid "Title"
+msgstr "Заголовок"
 
 #: blog/models.py:21
-msgid "Short Excerpt EN"
-msgstr "Короткое описание EN"
+#| msgid "Short Excerpt EN"
+msgid "Short Excerpt"
+msgstr "Краткое описание"
 
 #: blog/models.py:22
-msgid "Short Excerpt RU"
-msgstr "Короткое описание RU"
-
-#: blog/models.py:23
-msgid "Short Excerpt UA"
-msgstr "Короткое описание UA"
-
-#: blog/models.py:24
-msgid "Content EN"
-msgstr "Контакты EN"
+#| msgid "Content EN"
+msgid "Content"
+msgstr "Контакты"
 
 #: blog/models.py:25
-msgid "Content RU"
-msgstr "Контакты RU"
-
-#: blog/models.py:26
-msgid "Content UA"
-msgstr "Контакты UA"
-
-#: blog/models.py:28
 msgid "Card Thumbnail"
 msgstr "Миниатюра картки"
 
-#: blog/models.py:29
+#: blog/models.py:26
 msgid ""
 "Picture must be in                                                    png "
 "format with transparent                                                   "
 "background"
 msgstr "Картинка должна быть в формате png из прозрачным фоном"
 
-#: blog/models.py:33
+#: blog/models.py:30
 msgid "Banner Thumbnail"
 msgstr "Изображение на баннере"
 
-#: blog/models.py:35
+#: blog/models.py:32
 msgid "Popup Thumbnail"
 msgstr "Изображение в модальном окне"
 
-#: blog/models.py:37 blog/models.py:61 cases/models.py:16
+#: blog/models.py:34 blog/models.py:58 cases/models.py:35
 #: partners/models.py:13
 msgid "Created"
 msgstr "Создано"
 
-#: blog/models.py:38
+#: blog/models.py:35
 msgid "Likes"
 msgstr "Лайки"
 
-#: blog/models.py:43
+#: blog/models.py:40
 msgid "New"
 msgstr "Новость"
 
-#: blog/models.py:52 blog/models.py:54
+#: blog/models.py:49 blog/models.py:51
 msgid "Author"
 msgstr "Автор"
 
-#: blog/models.py:58
+#: blog/models.py:55
 msgid "Post"
 msgstr "Статья"
 
-#: blog/models.py:59 blog/models.py:65 blog/templates/blog/detail.html:68
+#: blog/models.py:56 blog/models.py:62 blog/templates/blog/detail.html:56
 msgid "Comment"
 msgstr "Комментировать"
 
-#: blog/models.py:66
+#: blog/models.py:63
 msgid "Comments"
 msgstr "Комментарии"
 
@@ -129,27 +108,30 @@ msgstr "Комментарии"
 msgid "close"
 msgstr "закрыть"
 
-#: blog/templates/blog/detail.html:46
+#: blog/templates/blog/detail.html:40
 msgid "message"
 msgstr "сообщение"
 
-#: blog/templates/blog/list.html:46
+#: blog/templates/blog/list.html:40
 msgid "Read also"
 msgstr "Читайте также"
 
-#: blog/templates/blog/list.html:66
+#: blog/templates/blog/list.html:52
 msgid "Read more"
 msgstr "Читать больше"
 
-#: blog/templates/blog/list.html:67
+#: blog/templates/blog/list.html:53
 msgid "arrow"
 msgstr "стрелка"
 
 #: bloggers/apps.py:8 bloggers/templates/bloggers/list.html:5
-#: pages/templates/layout/base.html:80 pages/templates/layout/base.html:118
-#: pages/templates/pages/home.html:418
+#: pages/templates/layout/base.html:79 pages/templates/layout/base.html:112
 msgid "Bloggers"
 msgstr "Блогеры"
+
+#: bloggers/forms.py:25 bloggers/templates/bloggers/list.html:47
+msgid "Search"
+msgstr "Поиск"
 
 #: bloggers/models.py:7
 msgid "Slug"
@@ -159,7 +141,8 @@ msgstr "Слаг"
 msgid "Tag"
 msgstr "Тег"
 
-#: bloggers/models.py:11 bloggers/models.py:18
+#: bloggers/models.py:11 bloggers/models.py:18 bloggers/models.py:41
+#: bloggers/models.py:64
 msgid "Tags"
 msgstr "Теги"
 
@@ -167,106 +150,138 @@ msgstr "Теги"
 msgid "Youtube Link"
 msgstr "Ссылка Ютюб"
 
-#: bloggers/models.py:20 cases/models.py:8 partners/models.py:8
-msgid "Title"
-msgstr "Заголовок"
-
-#: bloggers/models.py:22
+#: bloggers/models.py:22 bloggers/models.py:47 bloggers/models.py:69
 msgid "Logo link"
 msgstr "Ссылка на логотип"
 
-#: bloggers/models.py:24 bloggers/templates/bloggers/list.html:70
-#: bloggers/templates/bloggers/list.html:82
+#: bloggers/models.py:24 bloggers/models.py:49 bloggers/models.py:71
+#: bloggers/templates/bloggers/list.html:59
+#: bloggers/templates/bloggers/list.html:66
+#: bloggers/templates/bloggers/list.html:73
+#: bloggers/templates/bloggers/list.html:86
+#: bloggers/templates/bloggers/list.html:96
+#: bloggers/templates/bloggers/list.html:106
 msgid "Subscribers"
 msgstr "Подписчики"
 
-#: bloggers/models.py:26 bloggers/templates/bloggers/list.html:71
-#: bloggers/templates/bloggers/list.html:83
+#: bloggers/models.py:26 bloggers/templates/bloggers/list.html:60
+#: bloggers/templates/bloggers/list.html:87 cases/models.py:33
+#: cases/templates/cases/detail.html:21
 msgid "Views"
 msgstr "Просмотры"
 
-#: bloggers/models.py:28 bloggers/templates/bloggers/list.html:72
-#: bloggers/templates/bloggers/list.html:84
+#: bloggers/models.py:28 bloggers/templates/bloggers/list.html:61
+#: bloggers/templates/bloggers/list.html:88
 msgid "Last video"
 msgstr "Последнее видео"
 
-#: bloggers/models.py:32
+#: bloggers/models.py:33
 msgid "Youtuber"
 msgstr "Ютюбер"
 
-#: bloggers/models.py:33
+#: bloggers/models.py:34
 msgid "Youtubers"
 msgstr "Ютюберы"
 
-#: bloggers/templates/bloggers/list.html:59
-msgid "Search"
-msgstr "Поиск"
+#: bloggers/models.py:42
+msgid "Instagram Link"
+msgstr "Ссылка Инстаграм"
 
-#: bloggers/templates/bloggers/list.html:68
-#: bloggers/templates/bloggers/list.html:80
+#: bloggers/models.py:51 bloggers/templates/bloggers/list.html:74
+#: bloggers/templates/bloggers/list.html:107
+msgid "Involvement"
+msgstr "Вовлечение"
+
+#: bloggers/models.py:56 bloggers/models.py:57
+msgid "Instagram"
+msgstr "Инстаграм"
+
+#: bloggers/models.py:65
+msgid "Twich Link"
+msgstr "Ссылка Твич"
+
+#: bloggers/models.py:73
+msgid "Average online"
+msgstr "Средний онлайн"
+
+#: bloggers/models.py:75 bloggers/templates/bloggers/list.html:68
+#: bloggers/templates/bloggers/list.html:98
+msgid "Last stream"
+msgstr "Последний стрим"
+
+#: bloggers/models.py:80 bloggers/models.py:81
+msgid "Twich"
+msgstr "Твич"
+
+#: bloggers/templates/bloggers/list.html:57
+#: bloggers/templates/bloggers/list.html:64
+#: bloggers/templates/bloggers/list.html:71
+#: bloggers/templates/bloggers/list.html:84
+#: bloggers/templates/bloggers/list.html:94
+#: bloggers/templates/bloggers/list.html:104
 msgid "Influencer"
 msgstr "Инфлюэнсер"
 
-#: bloggers/templates/bloggers/list.html:69
-#: bloggers/templates/bloggers/list.html:81 partners/models.py:11
+#: bloggers/templates/bloggers/list.html:58
+#: bloggers/templates/bloggers/list.html:65
+#: bloggers/templates/bloggers/list.html:72
+#: bloggers/templates/bloggers/list.html:85
+#: bloggers/templates/bloggers/list.html:95
+#: bloggers/templates/bloggers/list.html:105 partners/models.py:11
 msgid "Link"
 msgstr "Ссылка"
 
-#: bloggers/templates/bloggers/list.html:91
-#, fuzzy
+#: bloggers/templates/bloggers/list.html:67
+#: bloggers/templates/bloggers/list.html:97
+msgid "Avarage online"
+msgstr "Средний онлайн"
+
+#: bloggers/templates/bloggers/list.html:115
 #| msgid "Bloggers"
 msgid "Bloggers not found"
-msgstr "Блогеры"
+msgstr "Блогеры не найдені"
 
-#: cases/apps.py:8 cases/models.py:21 cases/templates/cases/list.html:8
-#: pages/templates/layout/base.html:60 pages/templates/layout/base.html:113
+#: cases/apps.py:8 cases/models.py:40 cases/templates/cases/list.html:5
+#: pages/templates/layout/base.html:59 pages/templates/layout/base.html:110
 msgid "Cases"
 msgstr "Кейсы"
 
-#: cases/models.py:10 cases/models.py:26 partners/models.py:10
+#: cases/models.py:20
+msgid "Color theme"
+msgstr "Цвет темы"
+
+#: cases/models.py:25
+msgid "Description"
+msgstr "Описание"
+
+#: cases/models.py:27
+msgid "Footer text"
+msgstr ""
+
+#: cases/models.py:31 cases/models.py:45 partners/models.py:10
 #: partners/models.py:23
 #: venv/lib/python3.8/site-packages/django/db/models/fields/files.py:392
 msgid "Image"
 msgstr "Изображение"
 
-#: cases/models.py:11 cases/templates/cases/list.html:40
-msgid "Budget"
-msgstr "Бюджет"
+#: cases/models.py:32 cases/templates/cases/detail.html:17
+#| msgid "Influencer"
+msgid "Influencers"
+msgstr "Инфлюэнсер"
 
-#: cases/models.py:12 cases/templates/cases/list.html:45
-msgid "Coverage"
-msgstr "Охват"
-
-#: cases/models.py:13 cases/templates/cases/list.html:50
-msgid "Service"
-msgstr "Услуга"
-
-#: cases/models.py:14 cases/templates/cases/list.html:57
-msgid "Geo"
-msgstr "Гео"
-
-#: cases/models.py:20
+#: cases/models.py:39
 msgid "Case"
 msgstr "Кейс"
 
-#: cases/templates/cases/list.html:10
-msgid ""
-"\n"
-"                        Tap the card,<br>to see more information\n"
-"                    "
-msgstr ""
-"\n"
-"Тапните по карточке,<br>чтобы увидеть больше информации"
-
-#: hustler/settings.py:129
+#: hustler/settings.py:131
 msgid "English"
 msgstr "Английский"
 
-#: hustler/settings.py:130
+#: hustler/settings.py:132
 msgid "Russian"
 msgstr "Русский"
 
-#: hustler/settings.py:131
+#: hustler/settings.py:133
 msgid "Ukrainian"
 msgstr "Украинский"
 
@@ -286,18 +301,18 @@ msgstr "Рекламный бюджет"
 msgid "Main"
 msgstr "Главная"
 
-#: pages/templates/layout/base.html:50 pages/templates/layout/base.html:111
+#: pages/templates/layout/base.html:49 pages/templates/layout/base.html:109
 msgid "Services"
 msgstr "Услуги"
 
-#: pages/templates/layout/base.html:70 pages/templates/layout/base.html:115
+#: pages/templates/layout/base.html:69 pages/templates/layout/base.html:111
 #: partners/apps.py:8 partners/models.py:18
 #: partners/templates/partners/list.html:8
 msgid "Partners"
 msgstr "Партнеры"
 
-#: pages/templates/layout/base.html:95 pages/templates/layout/base.html:124
-#: pages/templates/pages/home.html:676
+#: pages/templates/layout/base.html:94 pages/templates/layout/base.html:114
+#: pages/templates/pages/home.html:418
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -594,31 +609,23 @@ msgstr ""
 "<p>Создание, наполнение и ведение социальных сетей</p>\n"
 "<p>Аналитика и отчетность</p>"
 
-#: pages/templates/pages/home.html:445 pages/templates/pages/home.html:470
-#: pages/templates/pages/home.html:495 pages/templates/pages/home.html:520
-#: pages/templates/pages/home.html:545 pages/templates/pages/home.html:570
-#: pages/templates/pages/home.html:595 pages/templates/pages/home.html:620
-#: pages/templates/pages/home.html:644 pages/templates/pages/home.html:667
-msgid "instagram followers"
-msgstr "подписчиков в instagram"
-
-#: pages/templates/pages/home.html:677
+#: pages/templates/pages/home.html:419
 msgid "Fill out the form or write to us"
 msgstr "Заполните форму или напишите нам"
 
-#: pages/templates/pages/home.html:694
+#: pages/templates/pages/home.html:436
 msgid "Sending..."
 msgstr "Отправка..."
 
-#: pages/templates/pages/home.html:694
+#: pages/templates/pages/home.html:436
 msgid "Sent!"
 msgstr "Отправлено!"
 
-#: pages/templates/pages/home.html:694
+#: pages/templates/pages/home.html:436
 msgid "Error"
 msgstr "Ошибка"
 
-#: pages/templates/pages/home.html:695
+#: pages/templates/pages/home.html:437
 msgid "Send"
 msgstr "Отправить"
 
@@ -1831,3 +1838,47 @@ msgstr ""
 #: venv/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Title EN"
+#~ msgstr "Заголовок EN"
+
+#~ msgid "Title RU"
+#~ msgstr "Заголовок RU"
+
+#~ msgid "Title UA"
+#~ msgstr "Заголовок UA"
+
+#~ msgid "Short Excerpt RU"
+#~ msgstr "Короткое описание RU"
+
+#~ msgid "Short Excerpt UA"
+#~ msgstr "Короткое описание UA"
+
+#~ msgid "Content RU"
+#~ msgstr "Контакты RU"
+
+#~ msgid "Content UA"
+#~ msgstr "Контакты UA"
+
+#~ msgid "Budget"
+#~ msgstr "Бюджет"
+
+#~ msgid "Coverage"
+#~ msgstr "Охват"
+
+#~ msgid "Service"
+#~ msgstr "Услуга"
+
+#~ msgid "Geo"
+#~ msgstr "Гео"
+
+#~ msgid ""
+#~ "\n"
+#~ "                        Tap the card,<br>to see more information\n"
+#~ "                    "
+#~ msgstr ""
+#~ "\n"
+#~ "Тапните по карточке,<br>чтобы увидеть больше информации"
+
+#~ msgid "instagram followers"
+#~ msgstr "подписчиков в instagram"

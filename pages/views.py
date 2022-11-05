@@ -38,3 +38,7 @@ def home_view(request):
         'partners': partners,
         'contact_form': contact_form,
     })
+
+
+def privacy_policy(request):
+    return render(request, 'pages/privacy_policy.html', {})

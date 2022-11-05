@@ -1,13 +1,42 @@
 main.cases {
+    position: relative;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     row-gap: 120px;
     padding-top: calc(var(--height-header) + var(--height-header-margin));
     background-color: #1C1C1C;
-    min-height: 100vh;
     padding-bottom: 180px;
     --gradient-background: linear-gradient(180deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
     overflow: hidden;
+}
+
+main.cases::before,
+main.cases::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #0D2DFF;
+    border-radius: 50%;
+    filter: blur(300px);
+    opacity: 0.5;
+}
+
+main.cases::before {
+    width: 30%;
+    height: 60%;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+}
+
+main.cases::after {
+    width: 20%;
+    height: 40%;
+    right: 15%;
+    top: 70%;
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
 }
 
 main.cases .yellow {
@@ -125,7 +154,7 @@ main.cases .green {
 
 .case-stats {
     display: grid;
-    grid-column: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     row-gap: 40px;
 }
 
@@ -151,6 +180,10 @@ main.cases .green {
     align-items: center;
 }
 
+.cases-item__footer img {
+    flex-shrink: 0;
+}
+
 .slider-item-wrapper {
     padding: 0 60px;
 }
@@ -173,4 +206,63 @@ main.cases .green {
 
 .extra-footer {
     padding: 40px 0;
+}
+
+@media (max-width: 1199px) {
+    .slider-item-wrapper {
+        padding: 0;
+    }
+    
+    .cases-item {
+        padding: 60px 40px;
+    }
+
+    .cases-item__inner {
+        width: 60%;
+    }
+    
+    .case-stats,
+    .cases-item__inner {
+        row-gap: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .cases-item {
+        padding: 20px;
+    }
+
+    .stats-item__cnt,
+    .cases-item__title {
+        font-size: 30px;
+    }
+
+    .cases-item__desc,
+    .stats-item__label,
+    .cases-item__footer {
+        column-gap: 15px;
+        font-size: 13px;
+    }
+
+    .cases-item__footer img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .cases-item::before {
+        font-size: 100px;
+    }
+
+    .cases-item .bg {
+        opacity: 0.2;
+    }
+
+    .cases-item__inner {
+        width: 100%;
+    }
+
+    .cases-item {
+        padding: 40px 20px;
+    }
 }

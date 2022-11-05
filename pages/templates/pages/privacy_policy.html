@@ -1,0 +1,96 @@
+{% extends 'layout/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans 'Privacy Policy' %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/cases.css' %}">
+{% endblock %}
+
+{% block content %}
+<main id="main" class="cases">
+    <div class="container">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+            {% if request.LANGUAGE_CODE == 'en' %}
+                <h1>Confidentiality policy</h1>
+                <h2><span>Who are we</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> Our website address is: https://hustlerdigital.pro.</span></p>
+                <h2><span>Comments</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> If a visitor leaves a comment on the site, we collect the data indicated in the comment form, as well as the visitor&#8217;s IP address and browser user-agent data for the purpose of spam detection.</span></p>
+                <h2><span>Media files</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> If you are a registered user and upload photos to the site, you may want to avoid uploading images with EXIF ​​metadata, as they may contain your GPS location data. Visitors can extract this information by downloading images from the site.</span></p>
+                <h2><span>Cookies</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> If you leave a comment on our site, you may opt-in to saving your name, email address and website in a cookie. This is done for your convenience, so as not to fill in the data again when re-commenting. These cookies are stored for one year.</span></p>
+                <p><span>If you have an account on the site and you log in, we will set a temporary cookie to determine if your browser supports cookies, cookies do not contain any personal information and are deleted when you close your browser.</span></p>
+                <p><span>When you sign in to your account, we also set several cookies with login details and screen settings. Login cookies are stored for two days, screen settings cookies for a year. If you choose the &#8220;Remember me&#8221; option, your login information will be stored for two weeks. When you log out of your account, the login cookies will be deleted.</span></p>
+                <p><span>When editing or publishing an article in the browser, an additional cookie will be stored, it does not contain personal data and contains only the ID of the post you edited, expires after 1 day.</span></p>
+                <h2><span>Embedded content from other websites</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> Articles on this site may include embeddable content (eg videos, images, articles, etc.) that behaves in the same way as if the visitor has visited another site.</span></p>
+                <p><span>These sites may collect data about you, use cookies, embed additional third party tracking, and monitor your interaction with embedded content, including interaction tracking if you have an account and are logged in to that site.</span></p>
+                <h2><span>Who we share your data with</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> If you request a password reset, your IP address will be included in the reset email.</span></p>
+                <h2><span>How long do we keep your data</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> If you leave a comment, the comment itself and its metadata are stored indefinitely. This is done in order to detect and approve subsequent comments automatically, instead of queuing them for approval.</span></p>
+                <p><span>For users who register on our site, we store the personal information that they indicate in their profile. All users can see, edit or remove their profile information at any time (except for the username). The website administration can also see and change this information.</span></p>
+                <h2><span>What are your rights to your data</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> If you have an account on the site or if you have left comments, you can request an export file of the personal data we have stored about you, including the data you have provided. You can also request that this data be deleted, this does not include data that we are required to keep for administrative, legal or security purposes.</span></p>
+                <h2><span>Where do we send your data</span></h2>
+                <p><strong class="privacy-policy-tutorial"><span></span></strong><span> User comments may be checked by an automated spam detection service.</span></p>
+            {% elif request.LANGUAGE_CODE == 'ru' %}
+                <h1>Политика конфиденциальности</h1>
+                <h2>Кто мы</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>Наш адрес сайта: https://hustlerdigital.pro.</p>
+                <h2>Комментарии</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>Если посетитель оставляет комментарий на сайте, мы собираем данные указанные в форме комментария, а также IP адрес посетителя и данные user-agent браузера с целью определения спама.</p>
+                <h2>Медиафайлы</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>Если вы зарегистрированный пользователь и загружаете фотографии на сайт, вам возможно следует избегать загрузки изображений с метаданными EXIF, так как они могут содержать данные вашего месторасположения по GPS. Посетители могут извлечь эту информацию скачав изображения с сайта.</p>
+                <h2>Куки</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>Если вы оставляете комментарий на нашем сайте, вы можете включить сохранение вашего имени, адреса email и вебсайта в куки. Это делается для вашего удобства, чтобы не заполнять данные снова при повторном комментировании. Эти куки хранятся в течение одного года.</p>
+                <p>Если у вас есть учетная запись на сайте и вы войдете в неё, мы установим временный куки для определения поддержки куки вашим браузером, куки не содержит никакой личной информации и удаляется при закрытии вашего браузера.</p>
+                <p>При входе в учетную запись мы также устанавливаем несколько куки с данными входа и настройками экрана. Куки входа хранятся в течение двух дней, куки с настройками экрана &#8212; год. Если вы выберете возможность &#171;Запомнить меня&#187;, данные о входе будут сохраняться в течение двух недель. При выходе из учетной записи куки входа будут удалены.</p>
+                <p>При редактировании или публикации статьи в браузере будет сохранен дополнительный куки, он не содержит персональных данных и содержит только ID записи отредактированной вами, истекает через 1 день.</p>
+                <h2>Встраиваемое содержимое других вебсайтов</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>Статьи на этом сайте могут включать встраиваемое содержимое (например видео, изображения, статьи и др.), подобное содержимое ведет себя так же, как если бы посетитель зашел на другой сайт.</p>
+                <p>Эти сайты могут собирать данные о вас, использовать куки, внедрять дополнительное отслеживание третьей стороной и следить за вашим взаимодействием с внедренным содержимым, включая отслеживание взаимодействия, если у вас есть учетная запись и вы авторизовались на том сайте.</p>
+                <h2>С кем мы делимся вашими данными</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>Если вы запросите сброс пароля, ваш IP будет указан в email-сообщении о сбросе.</p>
+                <h2>Как долго мы храним ваши данные</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>Если вы оставляете комментарий, то сам комментарий и его метаданные сохраняются неопределенно долго. Это делается для того, чтобы определять и одобрять последующие комментарии автоматически, вместо помещения их в очередь на одобрение.</p>
+                <p>Для пользователей с регистрацией на нашем сайте мы храним ту личную информацию, которую они указывают в своем профиле. Все пользователи могут видеть, редактировать или удалить свою информацию из профиля в любое время (кроме имени пользователя). Администрация вебсайта также может видеть и изменять эту информацию.</p>
+                <h2>Какие у вас права на ваши данные</h2>
+                <p><strong class="privacy-policy-tutorial"></strong>При наличии учетной записи на сайте или если вы оставляли комментарии, то вы можете запросить файл экспорта персональных данных, которые мы сохранили о вас, включая предоставленные вами данные. Вы также можете запросить удаление этих данных, это не включает данные, которые мы обязаны хранить в административных целях, по закону или целях безопасности.</p>            
+                <p><strong class="privacy-policy-tutorial"></strong>Комментарии пользователей могут проверяться автоматическим сервисом определения спама.</p>
+            {% else %}
+                <h1>Політика конфідеційності</h1>
+                <h2>Хто ми</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Наша адреса сайту: https://hustlerdigital.pro.</p>
+                <h2>Коментарі</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Якщо відвідувач залишає коментар на сайті, ми збираємо дані, зазначені у формі коментаря, а також IP адресу відвідувача та дані user-agent браузера з метою визначення спаму.</p>
+                <h2>Медіафайли</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Якщо ви зареєстрований користувач і завантажуєте фотографії на сайт, вам можливо слід уникати завантаження зображень з метаданими EXIF, так як вони можуть містити дані вашого розташування GPS. Відвідувачі можуть отримати цю інформацію завантаживши зображення з сайту.</p>
+                <h2>Печиво</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Якщо ви залишаєте коментар на нашому сайті, ви можете включити збереження вашого імені, адреси email та веб-сайту в кукі. Це робиться для вашої зручності, щоб не заповнювати дані знову при повторному коментуванні. Ці куки зберігаються протягом одного року.</p>
+                <p>Якщо у вас є обліковий запис на сайті і ви увійдете в нього, ми встановимо тимчасовий кукі для визначення підтримки кукі вашим браузером, кукі не містить жодної особистої інформації і видаляється при закритті вашого браузера.</p>
+                <p>При вході в обліковий запис ми також встановлюємо кілька кукі з даними входу та налаштуваннями екрана. Куки входу зберігаються протягом двох днів, куки з налаштуваннями екрана – рік. Якщо ви оберете можливість &#8220;Запам&#8217;ятати мене&#8221;, дані про вхід будуть зберігатися протягом двох тижнів. При виході з облікового запису куки входу будуть видалені.</p>
+                <p>При редагуванні або публікації статті в браузері буде збережено додатковий куки, він не містить персональних даних і містить тільки ID запису відредагованої вами, закінчується через 1 день.</p>
+                <h2>Вбудований вміст інших веб-сайтів</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Статті на цьому сайті можуть включати вбудований вміст (наприклад відео, зображення, статті та ін), подібний вміст поводиться так само, як якщо відвідувач зайшов на інший сайт.</p>
+                <p>Ці сайти можуть збирати дані про вас, використовувати cookie, впроваджувати додаткове відстеження третьою стороною та стежити за вашою взаємодією з впровадженим вмістом, включаючи відстеження взаємодії, якщо у вас є обліковий запис і ви авторизувалися на тому сайті.</p>
+                <h2>З ким ми ділимося вашими даними</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Якщо ви запросите скидання пароля, ваш IP буде вказано в електронному повідомленні про скидання.</p>
+                <h2>Як довго ми зберігаємо ваші дані</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Якщо ви залишаєте коментар, то сам коментар та його метадані зберігаються невизначено довго. Це робиться для того, щоб визначати та схвалювати наступні коментарі автоматично, замість поміщення їх у чергу на схвалення.</p>
+                <p>Для користувачів із реєстрацією на нашому сайті ми зберігаємо ту особисту інформацію, яку вони вказують у своєму профілі. Всі користувачі можуть бачити, редагувати або видалити інформацію з профілю в будь-який час (крім імені користувача). Адміністрація веб-сайту також може бачити та змінювати цю інформацію.</p>
+                <h2>Які у вас права на ваші дані</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> За наявності облікового запису на сайті або якщо ви залишали коментарі, ви можете запросити файл експорту персональних даних, які ми зберегли про вас, включаючи надані вами дані. Ви також можете запросити видалення цих даних, це не включає дані, які ми зобов&#8217;язані зберігати в адміністративних цілях, за законом чи безпекою.</p>
+                <h2>Куди ми надсилаємо ваші дані</h2>
+                <p><strong class="privacy-policy-tutorial"></strong> Коментарі користувачів можуть перевірятись автоматичним сервісом визначення спаму.</p>
+            {% endif %}
+        </div>
+    </div>
+</main>
+<footer class="extra-footer" style="padding: 40px 0;">
+    {% include 'template-parts/footer.html' %}
+</footer>
+{% endblock %}
