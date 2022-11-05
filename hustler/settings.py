@@ -172,3 +172,8 @@ SESSION_COOKIE_HTTPONLY = True
 MAIL_RECIPIENTS = ['guldmytro@gmail.com']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST_USER = 'guldmytro@gmail.com'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
