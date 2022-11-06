@@ -6,8 +6,8 @@ from django.utils.translation import gettext_lazy as _
 
 class Partner(models.Model):
     title = models.CharField(max_length=30, verbose_name=_('Title'))
-    img = models.ImageField(upload_to='images/%Y/%m/%d/',
-                            verbose_name=_('Image'))
+    img = models.FileField(upload_to='images/%Y/%m/%d/',
+                           verbose_name=_('Image'))
     link = models.URLField(verbose_name=_('Link'))
     created = models.DateTimeField(auto_now_add=True, db_index=True,
                                    verbose_name=_('Created'))
