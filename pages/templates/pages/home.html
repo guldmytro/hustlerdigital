@@ -2,6 +2,28 @@
 {% load static %}
 {% load i18n %}
 
+{% block seo %}
+    
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:locale" content="{{ request.LANGUAGE_CODE }}" />
+    <meta property="og:type" content="website" />
+    {% if request.LANGUAGE_CODE == 'ru' %}
+        <meta name="description" content="Hustler Digital — это идеальное combo из эффективных инструментов маркетинга, экспириенса и лидеров мнений." />
+        <meta property="og:title" content="Главная - Hustler" />
+        <meta property="og:description" content="Hustler Digital — это идеальное combo из эффективных инструментов маркетинга, экспириенса и лидеров мнений." />
+    {% elif request.LANGUAGE_CODE == 'uk' %}
+        <meta name="description" content="Hustler Digital — це ідеальне combo з ефективних інструментів маркетингу, експірієнс і лідерів думок." />
+        <meta property="og:title" content="Головна - Hustler" />
+        <meta property="og:description" content="Hustler Digital — це ідеальне combo з ефективних інструментів маркетингу, експірієнс і лідерів думок." />
+    {% elif request.LANGUAGE_CODE == 'en' %}
+        <meta name="description" content="Hustler Digital — is the perfect combo of effective marketing tools, experience and influencers." />
+        <meta property="og:title" content="Home - Hustler" />
+        <meta property="og:description" content="Hustler Digital — is the perfect combo of effective marketing tools, experience and influencers." />
+    {% endif %}
+    <meta property="og:url" content="http://hustlerdigital.pro/" />
+    <meta property="og:site_name" content="Hustler" />
+{% endblock %}
+
 {% block content %}
     <div id="main" class="main">
         <video

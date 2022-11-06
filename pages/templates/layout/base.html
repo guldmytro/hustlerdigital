@@ -24,6 +24,7 @@
     <link rel="icon" href="{% static 'img/cropped-favicon-1-192x192.png' %}" sizes="192x192' %}" />
     <link rel="apple-touch-icon" href="{% static 'img/cropped-favicon-1-180x180.png' %}" />
     <meta name="msapplication-TileImage" content="{% static 'img/cropped-favicon-1-270x270.png' %}" />
+    {% block seo %}{% endblock %}
 </head>
 <body>
     <div class="onoffcanvas is-fixed is-left bg-dark text-white left-aside p-1" id="left-aside">
