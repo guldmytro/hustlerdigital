@@ -35,7 +35,7 @@ class Case(TranslatableModel):
                                    verbose_name=_('Created'))
 
     class Meta:
-        ordering = ('-created',)
+        ordering = ('created',)
         verbose_name = _('Case')
         verbose_name_plural = _('Cases')
 
