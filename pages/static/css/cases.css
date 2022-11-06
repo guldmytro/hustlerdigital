@@ -63,7 +63,7 @@ main.cases .red {
     --gradient-background: linear-gradient(180deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
 }
 
-main.cases .ligth-blue {
+main.cases .light-blue {
     --gradient-color-1: #259EF7;
     --gradient-color-2: #7EC9FF;
     --gradient-background: linear-gradient(180deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
