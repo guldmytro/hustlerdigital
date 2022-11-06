@@ -11,7 +11,7 @@ class Case(TranslatableModel):
         ('blue', 'blue'),
         ('mint', 'mint'),
         ('red', 'red'),
-        ('ligth-blue', 'ligth-blue'),
+        ('light-blue', 'light-blue'),
         ('orange', 'orange'),
         ('pink', 'pink'),
         ('light', 'light'),
